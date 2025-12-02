@@ -1,0 +1,194 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6eefc;
+  color: #2b2140;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo {
+  width: 175px;
+  height: 48px;
+}
+
+.nav-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #482983;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1d1533;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: rgba(72, 41, 131, 0.12);
+  color: #482983;
+}
+
+.btn-sos {
+  background-color: #ff5b7f;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white !important;
+  font-weight: 600;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background-image: url("image/ihclanding.png"); /* Tu imagen */
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(72, 41, 131, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 700;
+}
+
+.hero-text p {
+  color: white;
+  margin: 1rem 0 2rem;
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-sos-hero {
+  background: #ff5b7f;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-especialista {
+  border: 2px solid white;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Ilustración */
+.hero-illustration img {
+  width: 300px;
+  margin-top: 2rem;
+}
+
+/* ========== TARJETAS DE SERVICIOS ========== */
+.features-section {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.feature-card {
+  display: block;
+  text-decoration: none;
+  color: #2b2140;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon img {
+  width: 55px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-illustration img {
+    width: 260px;
+  }
+}
