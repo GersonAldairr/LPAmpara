@@ -116,53 +116,56 @@
   cursor: pointer;
 }
 
-.new {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.2rem;
-  margin-bottom: 2.5rem;
-}
-
-.field-group {
+/* NEWS: cada noticia apilada (imagen izq, texto der). */
+.news-list {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 1.2rem;
 }
 
-.field-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: #8d81b3;
+/* Cada noticia */
+.new {
+  display: grid;
+  grid-template-columns: 160px 1fr; /* miniatura + contenido */
+  gap: 1rem;
+  align-items: start;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: transparent; /* cambia si quieres fondo */
 }
 
-.field-value {
-  font-size: 0.95rem;
+/* imagen de la noticia (dentro del primer .field-group) */
+.new .field-group img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 960px) {
-  .account-layout {
+/* Asegura que la descripción ocupe el resto */
+.new .field-group + .field-group {
+  align-self: start;
+}
+
+/* Espaciado entre artículos (opcional) */
+.account-card-body .new + .new {
+  margin-top: 0.6rem;
+}
+
+.account-layout a{
+  text-decoration: none;
+  color: #482983;
+}
+
+/* Responsive: en pantallas pequeñas apilar imagen encima de texto */
+@media (max-width: 820px) {
+  .new {
     grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
-
-  .account-page {
-    padding: 1.5rem 1.25rem;
-  }
-}
-
-/* Versión tipo “Yanbal mobile”: sidebar como lista grande */
-@media (max-width: 600px) {
-  .account-sidebar {
-    order: -1; /* Sidebar arriba en mobile */
-  }
-
-  .sidebar-hello {
-    text-align: center;
-  }
-
-  .account-menu-item {
-    border-radius: 0;
-    border-bottom: 1px solid #f1e6ff;
+  .new .field-group img {
+    width: 100%;
+    height: 180px;
   }
 }
