@@ -14,27 +14,61 @@
     <!-- Estilos generales -->
     <link rel="stylesheet" href="ampara.css" />
     <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
     <link rel="stylesheet" href="autoevaluacion.css" />
   </head>
 
-  <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <div class="nav-left">
-        <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+    </div>
+
+    <nav class="nav-links">
+      <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+      <a href="pacientes.html">Pacientes</a>
+      <a href="articulo_psicologo.html">Artículos</a>
+      <a href="#">Nosotros</a>
+    </nav>
+
+    <div class="nav-right">
+      <!-- opcional: botón cuenta -->
+      <a href="#" class="btn-cuenta">Mi cuenta</a>
+
+      <button
+        class="btn-burger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL -->
+  <aside class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+
+        <div class="user-info">
+          <p class="user-name">Fab Q</p>
+          <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+        </div>
+
+        <button class="btn-close" aria-label="Cerrar menú">✕</button>
       </div>
 
-      <nav class="nav-links">
-        <a href="index.html" class="btn-sos">SOS</a>
-        <a href="hablarahora.html">Servicios</a>
-        <a href="#">Noticias</a>
+      <nav class="mobile-menu-links">
+        <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+        <a href="psicologo.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
         <a href="#">Nosotros</a>
+        <a href="mi_cuenta.html">Mi cuenta</a>
       </nav>
-
-      <div class="nav-right">
-        <a href="#" class="btn-cuenta">Mi cuenta</a>
-      </div>
-    </header>
+    </div>
+  </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
@@ -278,5 +312,6 @@
         </div>
       </div>
     </footer>
+    <script src="menu_hamburguesa.js"></script>
   </body>
 </html>
