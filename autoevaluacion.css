@@ -187,26 +187,82 @@
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* Tablet: una sola columna y un poco menos de padding */
 @media (max-width: 960px) {
+  .selftest-hero {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
   .selftest-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* test arriba, tarjeta abajo */
   }
 
   .selftest-sidecard {
-    order: -1; /* info arriba en pantallas chicas, si quieres */
+    order: -1; /* info arriba en pantallas chicas */
   }
 }
 
+/* Móvil mediano */
 @media (max-width: 720px) {
   .selftest-hero {
     padding-inline: 1.25rem;
+    padding-top: 2.1rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .selftest-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .selftest-header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .selftest-header p {
+    font-size: 0.9rem;
   }
 
   .selftest-card {
     padding: 1.6rem 1.4rem;
+  }
+
+  .scale-options {
+    gap: 0.5rem;
+  }
+
+  /* Que las opciones sean más cómodas de tocar */
+  .scale-options label {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Móvil chico */
+@media (max-width: 480px) {
+  .selftest-hero {
+    padding: 1.8rem 1rem 2.4rem;
+  }
+
+  .selftest-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .selftest-card {
+    padding: 1.4rem 1.2rem;
+  }
+
+  /* Botones uno debajo del otro */
+  .selftest-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
   }
 }

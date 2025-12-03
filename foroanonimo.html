@@ -10,29 +10,66 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="foroanonimo.css" />
-    <link rel="stylesheet" href="Pie.css" />
     <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="foroanonimo.css" />
   </head>
 
   <body>
-    <!-- HEADER / NAVBAR -->
     <header class="navbar">
       <div class="nav-left">
-        <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
       </div>
 
       <nav class="nav-links">
-        <a href="index.html" class="btn-sos">SOS</a>
-        <a href="#">Servicios</a>
-        <a href="#">Noticias</a>
-        <a href="#">Nosotros</a>
+        <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+        <a href="#" class="btn-sos">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="#">Articulos</a>
+        <a href="nosotros.html">Nosotros</a>
       </nav>
 
       <div class="nav-right">
+        <!-- opcional: botón cuenta -->
         <a href="#" class="btn-cuenta">Mi cuenta</a>
+
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+
+          <a href="servicios.html">Servicios</a>
+          <a href="#">Articulos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
@@ -280,5 +317,6 @@
     </footer>
 
     <script src="foroanonimo.js"></script>
+    <script src="menu_hamburguesa.js"></script>
   </body>
 </html>
