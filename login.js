@@ -38,7 +38,7 @@ function validarLogin(event) {
     window.location.href = "ampara.html";
   } else if (usuarioEncontrado.rol === "especialista") {
     alert("Bienvenida especialista 💼");
-    window.location.href = "especialista.html";
+    window.location.href = "psicologo.html";
   } else {
     alert("Rol desconocido. Contacte a soporte.");
   }
