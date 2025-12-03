@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="ampara.css" />
         <link rel="stylesheet" href="Pie.css" />
-        <link rel="stylesheet" href="miCuenta.css" />
+        <link rel="stylesheet" href="miCuentacopia.css" />
     </head>
 
     <body>
@@ -37,7 +37,7 @@
             <div class="opc-profile">
                 <ul>
                     <li>
-                        <a href="" class="profile-link"">
+                        <a href="" class="profile-link" data-target="perfil">
                             <div class="option">
                                 <div class="opc-img">
                                     <img src="icons/avatarPerfil.png" alt="user"/>
@@ -49,7 +49,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="profile-link" ">
+                        <a href="" class="profile-link" data-target="favoritos">
                             <div class="option">
                                 <div class="opc-img">
                                     <img src="icons/favoritosPerfil.png" alt="user"/>
@@ -61,7 +61,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="profile-link" ">
+                        <a href="" class="profile-link" data-target="citas">
                             <div class="option">
                                 <div class="opc-img">
                                     <img src="icons/citasPerfil.png" alt="user"/>
@@ -73,7 +73,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="profile-link" ">
+                        <a href="" class="profile-link" data-target="Notificaciones">
                             <div class="option">
                                 <div class="opc-img">
                                     <img src="icons/notificacionesPerfil.png" alt="user"/>
@@ -85,7 +85,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="profile-link" ">
+                        <a href="" class="profile-link" data-target="Reportar">
                             <div class="option">
                                 <div class="opc-img">
                                     <img src="icons/reportarPerfil.png" alt="user"/>
@@ -97,7 +97,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="profile-link" ">
+                        <a href="" class="profile-link" data-target="cerrarsesion">
                             <div class="option">
                                 <div class="opc-img">
                                     <img src="icons/cerrarSesion.png" alt="user"/>
@@ -109,7 +109,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="profile-link">
+                        <a href="" class="profile-link" data-target="eliminarcuenta">
                             <div class="option">
                                 <div class="opc-img">
                                     <img src="icons/eliminarCuenta.png" alt="user"/>
@@ -123,6 +123,62 @@
                 </ul>
             </div>
 
+            <div class="div-inf">
+                <!-- Panel: Perfil -->
+                <section id="perfil" class="content-panel">
+                    <div class="inf-contact">
+                        <h4>Información de contacto de emergencia</h4>
+                        <p>Se encontró (1) contacto de emergencia</p>
+                    </div>
+                    <div class="inf-card">
+                        <div class="inf-detail">
+                            <p>Contacto de emergencia #1</p>
+                            <p>anonimo@gmail.com</p>
+                            <p>123456789</p>
+                            <p>******</p>
+                        </div>
+                        <div class="div-btn-edit">
+                            <a href="#" class="btn-edit">Editar Contacto</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Panel: Favoritos -->
+                <section id="favoritos" class="content-panel hidden">
+                    <h4>Favoritos</h4>
+                    <p>Aquí van tus proveedores / servicios favoritos.</p>
+                </section>
+
+                <!-- Panel: Mis citas -->
+                <section id="citas" class="content-panel hidden">
+                    <h4>Mis citas</h4>
+                    <p>Lista de citas programadas...</p>
+                </section>
+
+                <!-- Panel: Notificaciones -->
+                <section id="notificaciones" class="content-panel hidden">
+                    <h4>Notificaciones</h4>
+                    <p>Preferencias y notificaciones recibidas.</p>
+                </section>
+
+                <!-- Panel: Reportar -->
+                <section id="reportar" class="content-panel hidden">
+                    <h4>Reportar un problema</h4>
+                    <p>Formulario para reportes.</p>
+                </section>
+
+                <!-- Panel: Cerrar Sesión -->
+                <section id="cerrarsesion" class="content-panel hidden">
+                    <h4>Cerrar Sesión</h4>
+                    <p>¿Estás seguro que quieres cerrar sesión?</p>
+                </section>
+
+                <!-- Panel: Eliminar cuenta -->
+                <section id="eliminarcuenta" class="content-panel hidden">
+                    <h4>Eliminar cuenta</h4>
+                    <p>Advertencia y confirmación para eliminar cuenta.</p>
+                </section>
+            </div>
         </section>
 
         <!-- PIE DE PAGINA -->
@@ -175,5 +231,6 @@
                 </div>
             </footer>
       </section>
+      <script src="miCuenta.js"></script>
     </body>
 </html>
