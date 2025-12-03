@@ -1,0 +1,196 @@
+/* ============================= */
+/*   FONDO COMPLETO DE LA PÁGINA */
+/* ============================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo con imagen + overlay morado */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+      rgba(72, 41, 131, 0.55),
+      rgba(72, 41, 131, 0.55)
+    ),
+    url("image/grupo-mujeres.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ============================= */
+/*     SECCIÓN REGISTRO          */
+/* ============================= */
+
+.registro {
+  min-height: calc(100vh - 220px); /* deja espacio para el footer */
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.registro-inner {
+  width: 100%;
+  max-width: 860px;
+  margin-top: -4px;
+}
+/* Título principal */
+
+.registro-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.8rem 0;
+}
+
+/* Contenedor dos columnas */
+
+.registro-content {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Formulario */
+
+.registro-form {
+  flex: 0 0 auto;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(4px);
+  border-radius: 1.2rem;
+  padding: 1.5rem 1.7rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3e3559;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input {
+  border-radius: 999px;
+  border: 1px solid #ddd7f3;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #fdfbff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #8e5cff;
+  box-shadow: 0 0 0 2px rgba(142, 92, 255, 0.25);
+}
+
+/* Texto de ayuda */
+
+.hint {
+  font-size: 0.78rem;
+  color: #6b657f;
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Términos */
+
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #463c63;
+  margin-bottom: 1rem;
+}
+
+.form-check input {
+  margin-top: 0.15rem;
+}
+
+.form-check a {
+  color: #8e5cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-check a:hover {
+  text-decoration: underline;
+}
+
+/* Botón */
+
+.btn-primary {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #482983;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3c226d;
+  box-shadow: 0 8px 20px rgba(33, 9, 64, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Link a login */
+
+.login-link {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 0.7rem;
+  color: #4a4458;
+}
+
+.login-link a {
+  color: #8e5cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Ilustración */
+
+.registro-illustration {
+  flex: 0 0 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registro-illustration img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
