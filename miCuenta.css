@@ -1,0 +1,76 @@
+/*PANTALLA PERFIL*/
+.section-profile{
+  display: flex;
+  gap: 10px;
+}
+.opc-profile{
+  background-color: rgb(255, 255, 255);
+  font-family: 'Poppins',sans-serif;
+  padding: 20px;
+  height: 100vh;
+}
+
+.opc-profile ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opc-profile a{
+  text-decoration: none;
+}
+
+.option{
+  display: flex;
+  align-items: center;
+  margin-left:20px;
+  margin-bottom: -20px;
+}
+
+.opc-txt h5{
+  margin-left: 15px;
+  color: #482983;
+  font-weight: 300;
+}
+
+.div-inf{
+  background-color: #482983;
+  flex: 1;
+  font-family: 'Poppins',sans-serif;
+  padding: 20px;
+  color: white;
+}
+
+.inf-contact p{
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+.inf-card{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  background-color: white;
+}
+
+.inf-detail{
+  color:#909090;
+  margin-left: 15px;
+  line-height: 5px;
+}
+
+.inf-detail p{
+  font-size: 12px;
+}
+
+.btn-edit {
+  background-color: #482983;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 12px;
+}
