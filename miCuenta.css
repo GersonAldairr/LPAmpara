@@ -42,13 +42,16 @@
     flex-direction: row;
     gap: 1rem;
 }
-.card-profile{
+
+/* Efecto hover en cada tarjeta */
+.card-profile {
     background-color: white;
     padding: 2rem 3rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .3s ease; /* animación suave */
 }
 
 .opc-img img{
@@ -56,7 +59,60 @@
     height: auto;
 }
 
-.option h5{
+.profile-link{
     text-decoration: none;
 }
 
+
+.card-profile:hover {
+    background-color: #482983;
+}
+
+.card-profile:hover h5 {
+    color: white;
+}
+
+.card-profile:hover .opc-img img {
+    filter: brightness(0) invert(1);
+}
+
+.card-profile h5 {
+    transition: .3s ease;
+}
+
+.opc-img img {
+    transition: .3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .navlinks{
+        display: none;
+    }
+
+    .nav-right{
+        display: none;
+    }
+
+    /* Contenedor principal en columna */
+    .opc-profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Group 1 y Group 2 en columna */
+    .group1,
+    .group2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Card más angosta en móvil */
+    .card-profile {
+        width: 100%;
+        max-width: 320px; /* opcional, para un look más limpio */
+    }
+}
