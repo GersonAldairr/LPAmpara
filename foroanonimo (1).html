@@ -40,7 +40,14 @@
         <div class="forum-inner">
           <!-- Título y descripción -->
           <header class="forum-header">
-            <h1>Foro anónimo</h1>
+            <div class="forum-header-top">
+              <!-- Botón de volver -->
+              <a href="ampara.html" class="back-btn">
+                <img src="icons/atras.png" alt="Volver" />
+              </a>
+
+              <h1>Foro anónimo</h1>
+            </div>
             <p>
               Comparte experiencias y recibe apoyo sin revelar tu identidad.
             </p>
@@ -49,9 +56,9 @@
           <!-- Categorías y buscador -->
           <div class="forum-top-row">
             <div class="forum-categories">
-              <button class="pill pill-active">Apoyo emocional</button>
+              <button class="pill">Apoyo emocional</button>
               <button class="pill">Asesoría legal</button>
-              <button class="pill">Recursos en tu distrito</button>
+
               <button class="pill">Preguntas</button>
             </div>
 
@@ -79,15 +86,16 @@
 
               <!-- Filtros de pestañas -->
               <div class="forum-tabs">
-                <button class="tab tab-active">Recientes</button>
+                <button class="tab">Recientes</button>
                 <button class="tab">Populares</button>
                 <button class="tab">Sin responder</button>
-                <button class="tab">Cerca de mí</button>
               </div>
 
               <!-- Post 1 -->
               <article class="post-card">
-                <div class="post-avatar"></div>
+                <div class="post-avatar">
+                  <img src="image/anonimo1.png" alt="anonimo1" />
+                </div>
 
                 <div class="post-body">
                   <h3 class="post-author">anónimo #45</h3>
@@ -99,15 +107,39 @@
                 </div>
 
                 <div class="post-actions">
-                  <button type="button">Responder</button>
+                  <button type="button" class="btn-responder">Responder</button>
                   <button type="button">Reacción ♡</button>
-                  <button type="button">Reportar</button>
+                  <button type="button" class="btn-reportar">Reportar</button>
                 </div>
               </article>
 
               <!-- Post 2 -->
               <article class="post-card">
-                <div class="post-avatar"></div>
+                <div class="post-avatar">
+                  <img src="image/anonimo1.png" alt="anonimo2" />
+                </div>
+
+                <div class="post-body">
+                  <h3 class="post-author">anónimo #41</h3>
+                  <p class="post-text">
+                    Mis días eran grises.. A veces me ocupaba tanto en los
+                    deberes que me olvidaba de mí misma, si alguna tiene una
+                    experiencia similar, puede compartir cómo lo superó.
+                  </p>
+                </div>
+
+                <div class="post-actions">
+                  <button type="button" class="btn-responder">Responder</button>
+                  <button type="button">Reacción ♡</button>
+                  <button type="button" class="btn-reportar">Reportar</button>
+                </div>
+              </article>
+
+              <!-- Post 3 -->
+              <article class="post-card">
+                <div class="post-avatar">
+                  <img src="image/anonimo1.png" alt="anonimo3" />
+                </div>
 
                 <div class="post-body">
                   <h3 class="post-author">anónimo #40</h3>
@@ -118,9 +150,9 @@
                 </div>
 
                 <div class="post-actions">
-                  <button type="button">Responder</button>
+                  <button type="button" class="btn-responder">Responder</button>
                   <button type="button">Reacción ♡</button>
-                  <button type="button">Reportar</button>
+                  <button type="button" class="btn-reportar">Reportar</button>
                 </div>
               </article>
             </div>
@@ -149,6 +181,59 @@
         </div>
       </section>
     </main>
+
+    <!-- MODAL RESPUESTA ANÓNIMA -->
+    <div class="reply-overlay" id="replyOverlay">
+      <div class="reply-card">
+        <h2>Tu respuesta será publicada de forma anónima</h2>
+
+        <div class="reply-input-wrapper">
+          <textarea
+            id="replyTextarea"
+            maxlength="200"
+            placeholder="Escribe tu respuesta aquí..."
+          ></textarea>
+          <span class="reply-char-count" id="replyCharCount">0/200</span>
+        </div>
+
+        <div class="reply-actions">
+          <button type="button" class="btn-reply-cancel" id="replyCancel">
+            Cancelar
+          </button>
+
+          <button type="button" class="btn-reply-send" id="replySend">
+            Publicar de forma anónima
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: REPORTAR MENSAJE -->
+
+    <div class="report-overlay" id="reportOverlay">
+      <div class="report-card">
+        <h2>Motivo de reporte de mensaje</h2>
+
+        <div class="report-input-wrapper">
+          <textarea
+            id="reportTextarea"
+            maxlength="200"
+            placeholder="Describe brevemente el motivo del reporte..."
+          ></textarea>
+          <span class="report-char-count" id="reportCharCount">0/200</span>
+        </div>
+
+        <div class="report-actions">
+          <button type="button" class="btn-report-cancel" id="reportCancel">
+            Cancelar
+          </button>
+
+          <button type="button" class="btn-report-send" id="reportSend">
+            Reportar
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER (MISMO QUE YA USAS) -->
     <footer class="footer">
@@ -193,5 +278,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="foroanonimo.js"></script>
   </body>
 </html>
