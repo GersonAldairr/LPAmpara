@@ -5,33 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AMPARA - Panel de ayuda</title>
 
+    <!-- Fuentes -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Estilos globales -->
     <link rel="stylesheet" href="ampara.css" />
     <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
     <header class="navbar">
       <div class="nav-left">
-        <img src="image/logo_morado.png" class="nav-logo" />
-        
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
       </div>
 
       <nav class="nav-links">
-        <a href="sos.html" class="btn-sos">SOS</a>
-        <a href="#">Servicios</a>
-        <a href="#">Noticias</a>
-        <a href="#">Nosotros</a>
+        <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+        <a href="#" class="btn-sos">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="#">Articulos</a>
+        <a href="nosotros.html">Nosotros</a>
       </nav>
 
       <div class="nav-right">
-        <a href="micuenta.html" class="btn-cuenta">Mi cuenta</a>
+        <!-- opcional: botón cuenta -->
+        <a href="#" class="btn-cuenta">Mi cuenta</a>
+
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+
+          <a href="servicios.html">Servicios</a>
+          <a href="#">Articulos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
 
     <!-- HERO -->
     <section class="hero">
@@ -43,109 +80,104 @@
           <p>Estamos aquí para brindarte apoyo y orientación.</p>
 
           <div class="hero-buttons">
-            <a href="sos.html" class="btn-sos-hero">SOS</a>
-            <a href="hablarahora.html" class="btn-especialista">Hablar con especialista</a>
+            <a href="#" class="btn-sos-hero">SOS</a>
+            <a href="hablarahora.html" class="btn-especialista">
+              Hablar con especialista
+            </a>
           </div>
         </div>
 
         <div class="hero-illustration">
-          <img src="image/ilustracion.png" alt="Ilustración" />
+          <img src="image/ilustracion.png" alt="Ilustración Ampara" />
         </div>
       </div>
     </section>
 
     <!-- TARJETAS DE SERVICIOS -->
-<section class="features-section">
-  
-  <a href="foroanonimo.html" class="feature-card">
-    <div class="feature-icon">
-      <img src="icons/comentario.png" alt="Chat anónimo" />
-    </div>
-    <h3>Chat anónimo seguro</h3>
-    <p>Accede a un chat de forma segura y confidencial.</p>
-  </a>
+    <section class="features-section">
+      <a href="#l" class="feature-card">
+        <div class="feature-icon">
+          <img src="icons/comentario.png" alt="Chat anónimo" />
+        </div>
+        <h3>Chat anónimo seguro</h3>
+        <p>Accede a un chat de forma segura y confidencial.</p>
+      </a>
 
-  <a href="Institucionescercanas.html" class="feature-card">
-    <div class="feature-icon">
-       <img src="icons/organizacion.png" alt="Instituciones" />
-    </div>
-    <h3>Instituciones cercanas</h3>
-    <p>Busca centros cercanos donde puedes recibir ayuda.</p>
-  </a> <div class="feature-card">
-    <div class="feature-icon">
-      <img src="icons/evaluacion.png" alt="Autoevaluación" />
-    </div>
-    <h3>Autoevaluación</h3>
-    <p>Test de autoevaluación para víctimas.</p>
-  </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="icons/organizacion.png" alt="Instituciones cercanas" />
+        </div>
+        <h3>Instituciones cercanas</h3>
+        <p>Busca centros cercanos donde puedes recibir ayuda.</p>
+      </div>
 
-  <div class="feature-card">
-    <div class="feature-icon">
-      <img src="icons/llamada.png" alt="Directorio" />
-    </div>
-    <h3>Directorio</h3>
-    <p>Accede a líneas de ayuda más efectivas.</p>
-  </div>
+      <a href="autoevaluacion.html" class="feature-card">
+        <div class="feature-icon">
+          <img src="icons/evaluacion.png" alt="Autoevaluación" />
+        </div>
+        <h3>Autoevaluación</h3>
+        <p>Test de autoevaluación para víctimas.</p>
+      </a>
 
-  <a href="foroanonimo.html" class="feature-card">
-    <div class="feature-icon">
-      <img src="icons/charla (1).png" alt="Foro anónimo" />
-    </div>
-    <h3>Foro anónimo</h3>
-    <p>Comparte tu experiencia con otras víctimas.</p>
-  </a>
+      <a href="foroanonimo.html" class="feature-card">
+        <div class="feature-icon">
+          <img src="icons/charla (1).png" alt="Foro anónimo" />
+        </div>
+        <h3>Foro anónimo</h3>
+        <p>Comparte tu experiencia con otras víctimas.</p>
+      </a>
+    </section>
 
-</section>
-        <!-- PIE DE PAGINA -->
+    <!-- PIE DE PÁGINA -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo Ampara"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
 
-        <section id="footer">
-          <footer class="footer">
-            <div class="footer-container">
-              <!-- Logo y nombre de sitio -->
-              <div class="footer-brand">
-                <img
-                  src="icons/logo_ampara_footer.png"
-                  alt="Logo"
-                  class="footer-logo"
-                />
-                <small>© 2025 Todos los derechos reservados</small>
-              </div>
-    
-              <!-- Enlaces legales -->
-              <div class="footer-links">
-                <h4>Legal</h4>
-                <a href="Documentos/Política de Privacidad.pdf"
-                  >Política de Privacidad</a
-                >
-                <!-- Dentro de href llama a un documento pdf con la poltica-->
-                <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
-                  >Términos y Condiciones</a
-                >
-                <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
-                <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
-              </div>
-    
-              <!-- Redes sociales con íconos personalizados -->
-              <div class="footer-social">
-                <h4>Síguenos</h4>
-                <a href="https://www.facebook.com/"
-                  ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
-                /></a>
-                <a href="https://www.instagram.com/"
-                  ><img
-                    src="icons/instagram.png"
-                    alt="Instagram"
-                    class="social-icon"
-                /></a>
-                <a href="https://www.youtube.com/"
-                  ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
-                /></a>
-                <a href="https://x.com/"
-                  ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
-                /></a>
-              </div>
-            </div>
-          </footer>
-        </section>
-    </body>
- </html>
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/politicaprivacidad.pdf">
+              Política de Privacidad
+            </a>
+            <a href="/Documentos/terminosycondiciones.pdf">
+              Términos y Condiciones
+            </a>
+            <a href="/Documentos/LeyProteccionDatos.pdf">
+              Protección de Datos
+            </a>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="menu_hamburguesa.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+/* ============================
+   BOTÓN HAMBURGUESA
+   ============================ */
+
+/* Oculto en desktop por defecto */
+.btn-burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* En móvil lo mostramos como círculo morado */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.9rem 1.2rem;
+    flex-wrap: nowrap;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .btn-cuenta {
+    display: none; /* si quieres ocultar "Mi cuenta" en móvil */
+  }
+
+  .btn-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #482983;
+    border: none;
+  }
+
+  .btn-burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: #ffffff;
+    margin: 3px 0;
+  }
+}
+
+/* ============================
+   MENÚ MÓVIL (DRAWER DERECHA)
+   ============================ */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  display: none; /* oculto por defecto */
+  justify-content: flex-end; /* panel pegado a la derecha */
+  background: rgba(0, 0, 0, 0.45); /* fondo oscuro semi-transparente */
+  z-index: 999;
+}
+
+.mobile-menu.is-open {
+  display: flex;
+}
+
+/* Panel blanco interno (como en tu segunda imagen) */
+.mobile-menu-panel {
+  width: 300px;
+  max-width: 80%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 18px rgba(0, 0, 0, 0.16);
+}
+
+/* Header del panel */
+.mobile-menu-header {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #f0edf7;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #bea5ec;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #2b2140;
+}
+
+.user-link {
+  font-size: 0.86rem;
+  color: #9274ca;
+  text-decoration: none;
+}
+
+.btn-close {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+/* Links del menú */
+.mobile-menu-links {
+  padding: 1.3rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  font-size: 1.02rem;
+}
+
+.mobile-menu-links a {
+  text-decoration: none;
+  color: #2b2140;
+  font-weight: 500;
+}
