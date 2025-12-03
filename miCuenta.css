@@ -12,7 +12,11 @@
 
 .opc-profile{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;     /* ✔ izquierda → derecha */
+    flex-wrap: wrap;         /* ✔ permite que bajen de línea */
+    gap: 1rem;               /* espacio entre tarjetas */
+    justify-content: center; /* opcional: centrarlas */
+    width: 100%;
 }
 
 
