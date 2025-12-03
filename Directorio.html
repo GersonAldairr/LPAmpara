@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="Directorio.css" /> 
+</head>
+<body>
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="image/logo_morado.png" class="nav-logo" />
+      </div>
+
+      <nav class="nav-links">
+        <a href="#" class="btn-sos">SOS</a>
+        <a href="psicologo.html">Servicios</a>
+        <a href="#">Noticias</a>
+        <a href="#">Nosotros</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="#" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+    <section class="directory-page-container">
+        <div class="directory-header">
+            <div class="header-top">
+                    <div class="titulo-fila">
+          <a href="ampara.html" class="btn-retroceso">
+            <img src="image/pista-anterior.png" alt="Volver" />
+          </a>
+            <h1>Directorio</h1>
+                    </div>
+            <p>Busca líneas seguras que estén disponibles para brindarte apoyo</p>
+
+            <div class="main-search-bar">
+                <input type="text" id="main-search-input" placeholder="Buscar por nombre, descripción o número de contacto...">
+                <button type="button" class="search-button">
+                    <img src="icons/lupa.png" alt="Buscar"> 
+                </button>
+            </div>
+            
+            <div class="filter-controls">
+                <label>
+                    <input type="checkbox" id="show-favorites">
+                    Mostrar solo Favoritos
+                </label>
+            </div>
+        </div>
+
+
+        <div class="directory-main-content">
+            <div class="directory-list" id="directory-list">
+            </div>
+
+            <div class="directory-sidebar">
+                <img src="icons/call.png" alt="Decoración de Llamada">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img
+            src="icons/logo_ampara_footer.png"
+            alt="Logo"
+            class="footer-logo"
+          />
+          <small>© 2025 Todos los derechos reservados</small>
+        </div>
+
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/Documentos/politicaprivacidad.pdf"
+            >Política de Privacidad</a
+          >
+          <a href="/Documentos/terminosycondiciones.pdf"
+            >Términos y Condiciones</a
+          >
+          <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+        </div>
+
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#"><img src="icons/facebook.png" class="social-icon" /></a>
+          <a href="#"><img src="icons/instagram.png" class="social-icon" /></a>
+          <a href="#"><img src="icons/youtube.png" class="social-icon" /></a>
+          <a href="#"><img src="icons/twitter.png" class="social-icon" /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="directorio.js"></script> 
+</body>
+</html>
