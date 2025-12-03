@@ -12,7 +12,18 @@ body {
 }
 
 /* ========== NAVBAR ========== */
+/* ========== NAVBAR MODIFICADO ========== */
 .navbar {
+  /* Propiedades para fijar */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* CORRECCIÓN AÑADIDA: Mejora la estabilidad de la posición fija */
+  transform: translateZ(0);
+
+  /* Tus propiedades existentes */
   display: flex;
   justify-content: space-between;
   align-items: center;

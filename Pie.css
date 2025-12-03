@@ -1,18 +1,11 @@
-/* =======================
-   FOOTER GENERAL
-======================= */
+/*=============== FOOTER GENERAL ======================= */
+
 .footer {
   background-color: #2d1b4d; /* Fondo morado oscuro */
   color: white;
   padding: 3rem 1rem 1.5rem; /* Más espacio arriba para bajar el contenido */
   font-family: "Roboto", sans-serif;
-
-  width: 100%;
-  margin: 0;
-  position: relative;
-}
-
-/* Contenedor flexible para 3 columnas */
+} /* Contenedor flexible para 3 columnas */
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -23,28 +16,22 @@
   gap: 2rem;
 }
 
-/* =======================
-     MARCA / LOGO
-  ======================= */
+/* =================logo ====================== */
 .footer-brand {
   flex: 1;
   min-width: 200px;
 }
-
 .footer-logo {
   width: 130px;
   height: 40px;
   display: block;
-  margin-bottom: 0 0 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
-
 .footer-brand small {
   font-size: 0.8rem;
 }
 
-/* =======================
-     ENLACES LEGALES
-  ======================= */
+/* =============enlaces================ */
 .footer-links {
   flex: 1;
   min-width: 200px;
@@ -67,9 +54,7 @@
   color: #fff;
 }
 
-/* =======================
-     REDES SOCIALES
-  ======================= */
+/* =============redes================= */
 .footer-social {
   flex: 1;
   min-width: 200px;
@@ -78,15 +63,13 @@
 .footer-social h4 {
   font-weight: 700;
   margin: 0 0 0.8rem 0; /* margen solo abajo */
-}
+} /* Los links de redes en una sola fila */
 
-/* Los links de redes en una sola fila */
 .footer-social a {
   display: inline-block;
   margin-right: 0.5rem;
-}
+} /* Íconos: mismo tamaño para todos */
 
-/* Íconos: mismo tamaño para todos */
 .social-icon {
   width: 22px;
   height: 22px;
@@ -94,61 +77,24 @@
   object-fit: contain; /* mantiene proporción sin deformar */
   transition: transform 0.2s ease-in-out;
 }
-
 .social-icon:hover {
   transform: scale(1.2);
 }
 
-/* =======================
-     RESPONSIVE
-  ======================= */
+/* =======responsive======== */
 
-/* Tablet y móvil */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.5rem;
   }
-
   .footer-brand,
   .footer-links,
   .footer-social {
     min-width: 100%;
   }
-
-  /* Centrar logo y texto de marca */
-  .footer-brand {
-    text-align: center;
-  }
-
-  .footer-logo {
-    margin: 0 auto 0.5rem auto;
-  }
-
   .footer-social a {
     margin-right: 0.4rem;
-  }
-}
-
-/* Móvil pequeño */
-@media (max-width: 480px) {
-  .footer {
-    padding: 2.2rem 1rem 1.3rem;
-  }
-
-  .footer-logo {
-    width: 115px;
-    height: auto;
-  }
-
-  .footer-links h4,
-  .footer-social h4 {
-    font-size: 0.95rem;
-  }
-
-  .footer-links a {
-    font-size: 0.85rem;
   }
 }
