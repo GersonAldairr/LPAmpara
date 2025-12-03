@@ -116,10 +116,11 @@
   cursor: pointer;
 }
 
-.account-card-body {
+.new {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 .field-group {

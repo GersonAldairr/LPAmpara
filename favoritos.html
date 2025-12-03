@@ -83,7 +83,7 @@
           </div>
 
           <nav class="account-menu">
-            <button class="account-menu-item is-active">
+            <button class="account-menu-item">
               <span class="icon">👤</span>
               <span>Perfil</span>
             </button>
@@ -93,7 +93,7 @@
               <span>Historial</span>
             </button>
 
-            <button class="account-menu-item">
+            <button class="account-menu-item is-active">
               <span class="icon">💜</span>
               <span>Favoritos</span>
             </button>
@@ -122,54 +122,129 @@
 
         <!-- Lado derecho -->
         <section class="account-main">
-          <h1 class="account-title">Mi perfil</h1>
+          <h1 class="account-title">Favoritos</h1>
 
-          <!-- Bloque datos personales -->
+          <!-- Bloque Noticias -->
           <article class="account-card">
             <header class="account-card-header">
-              <h2>Datos personales</h2>
-              <button class="btn-outline">Editar</button>
+              <h2>Noticias</h2>
             </header>
 
             <div class="account-card-body">
-              <div class="field-group">
-                <p class="field-label">Nombre</p>
-                <p class="field-value">Fabiana</p>
+              <div class="new">
+                <div class="field-group">
+                  <p class="field-label">Noticia #1</p>
+                  <img src="image/noticia1.png" alt="noticia">
+                </div>
+
+                <div class="field-group">
+                  <p class="field-label">Descripcion</p>
+                  <p class="field-value">Con motivo del Día Internacional de la Eliminación de la Violencia contra la Mujer, el Instituto Nacional de Estadística e Informática (INEI) reveló que, de acuerdo con la Encuesta Demográfica y de Salud Familiar (Endes 2022), el 35.6% de las mujeres de entre 15 y 49 años fueron víctimas de violencia familiar en los últimos 12 meses anteriores a la encuesta. El 34.8% indicó que en los últimos 12 meses había sido víctima de agresión psicológica y/o verbal; el 8.1%, de violencia física; y el 2.2%, de violencia sexual.</p>
+                </div>
               </div>
+              <div class="new">
+                <div class="field-group">
+                  <p class="field-label">Noticia #2</p>
+                  <img src="image/noticia2.png" alt="noticia">
+                </div>
 
-              <div class="field-group">
-                <p class="field-label">Apellido</p>
-                <p class="field-value">Q.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Bloque correo -->
-          <article class="account-card">
-            <header class="account-card-header">
-              <h2>Correo electrónico</h2>
-              <button class="btn-outline">Editar</button>
-            </header>
-
-            <div class="account-card-body">
-              <div class="field-group">
-                <p class="field-label">Correo</p>
-                <p class="field-value">fabianaqr09@gmail.com</p>
+                <div class="field-group">
+                  <p class="field-label">Descripcion</p>
+                  <p class="field-value">Lima, 25 nov (EFE).- Los centros médicos del Ministerio de Salud de Perú atendieron 176.925 casos de violencia contra la mujer, de enero a octubre de este año, donde la mayoría fueron adultas, de 30 a 59 años de edad, con 60.604 casos, y adolescentes con 44.662 incidencias, según informó este martes esa cartera. En el Día Internacional de la Eliminación de la Violencia contra la Mujer, el ministerio peruano subrayó que este tipo de violencia no solo deja huellas físicas; sino también genera efectos profundos en la salud mental, el bienestar social y el desarrollo de niñas, niños, adolescentes, mujeres adultas y comunidades. La directora ejecutiva de la Dirección de Salud Mental del ministerio, July Caballero, declaró que la violencia contra la mujer constituye un problema de salud pública y una grave violación de los derechos humanos. La cifra reportada hasta octubre pasado detalló que los casos contra mujeres jóvenes, de 18 a 29 años, ascendieron a 36.094, las denuncias contra niñas y niños a 30.694 y contra personas adultas mayores a 8.951 incidencias.</p>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- Bloque contraseña -->
+          <!-- Bloque directorios -->
           <article class="account-card">
             <header class="account-card-header">
-              <h2>Contraseña</h2>
-              <button class="btn-outline">Editar</button>
+              <h2>Directorios</h2>
             </header>
 
             <div class="account-card-body">
-              <div class="field-group">
-                <p class="field-label">Contraseña</p>
-                <p class="field-value">********</p>
+              <ul class="directory-list">
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Telefono de emergencia - Policia</strong>
+                    <div class="directory-meta">Linea 24/7</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +51 094 567 456</a></a>
+                  </div>
+                </li>
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Linea de Ayuda - ONG Aurora</strong>
+                    <div class="directory-meta">Atencion psicologica</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +51 123 456 789</a></a>
+                  </div>
+                </li>
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Linea 100</strong>
+                    <div class="directory-meta">Orientacion y soporte emocional</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +01 100</a></a>
+                  </div>
+                </li>
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Centros de emergencia Mujer y Familia</strong>
+                    <div class="directory-meta">Atencion integral y multidisciplinaria</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +01 419 726 0</a></a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </article>
+
+          <!-- Bloque Instituciones -->
+          <article class="account-card">
+            <header class="account-card-header">
+              <h2>Instituciones</h2>
+            </header>
+
+            <div class="account-card-body">
+              <div class="new">
+                <div class="field-group">
+                  <p class="field-label">Ministerio de la Mujer</p>
+                  <img src="image/Ministerio.png" alt="noticia">
+                </div>
+
+                <div class="field-group">
+                  <p class="field-label">Descripcion</p>
+                  <p class="field-value">El Ministerio de la Mujer y Poblaciones Vulnerables (MIMP) es el órgano del Estado peruano encargado de las políticas públicas relacionadas con los derechos de las mujeres y las poblaciones vulnerables, con sede principal en Lima, Perú, ubicada en el jirón Camaná, 616.</p>
+                </div>
+              </div>
+              <div class="new">
+                <div class="field-group">
+                  <p class="field-label">Policia Nacional del Peru</p>
+                  <img src="image/policia.png" alt="noticia">
+                </div>
+
+                <div class="field-group">
+                  <p class="field-label">Descripcion</p>
+                  <p class="field-value">Institución encargada de garantizar el orden, la seguridad y la protección de las personas. Atiende emergencias, previene delitos y brinda apoyo inmediato a quienes se encuentran en situación de riesgo, incluida la violencia doméstica</p>
+                </div>
+              </div>
+
+              <div class="new">
+                <div class="field-group">
+                  <p class="field-label">Ministerio Publico</p>
+                  <img src="image/ministerioPublico.png" alt="noticia">
+                </div>
+
+                <div class="field-group">
+                  <p class="field-label">Descripcion</p>
+                  <p class="field-value">Institución encargada de garantizar el orden, la seguridad y la protección de las personas. Atiende emergencias, previene delitos y brinda apoyo inmediato a quienes se encuentran en situación de riesgo, incluida la violencia doméstica</p>
+                </div>
               </div>
             </div>
           </article>
