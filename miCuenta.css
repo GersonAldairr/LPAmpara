@@ -7,13 +7,10 @@
   background-color: rgb(255, 255, 255);
   font-family: 'Poppins',sans-serif;
   padding: 20px;
-  height: 100vh;
 }
 
 .opc-profile ul{
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .opc-profile a{
