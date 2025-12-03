@@ -11,19 +11,46 @@
       rel="stylesheet"
     />
 
-    <!-- Estilos de esta pantalla -->
     <link rel="stylesheet" href="registro_usuario.css" />
-    <!-- Footer general del proyecto -->
     <link rel="stylesheet" href="Pie.css" />
   </head>
 
   <body>
     <!-- SECCIÓN REGISTRO -->
+    <header class="registro-header">
+      <!-- Flecha para volver a escoger tipo de usuario -->
+      <a
+        href="registro.html"
+        class="back-arrow"
+        aria-label="Volver a elegir tipo de usuario"
+      >
+        ←
+      </a>
+
+      <div class="registro-header-inner">
+        <h1>Registro de usuaria</h1>
+
+        <!-- Barra de progreso -->
+        <div class="progress-steps">
+          <div class="progress-step">
+            <span class="step-circle">1</span>
+            <span class="step-label">Tipo de usuario</span>
+          </div>
+
+          <div class="progress-step active">
+            <span class="step-circle">2</span>
+            <span class="step-label">Datos de registro</span>
+          </div>
+
+          <div class="progress-step">
+            <span class="step-circle">3</span>
+            <span class="step-label">Confirmación</span>
+          </div>
+        </div>
+      </div>
+    </header>
     <main class="registro">
       <div class="registro-inner">
-        <!-- Título -->
-        <h1 class="registro-title">Registro de usuaria</h1>
-
         <!-- Contenedor principal: formulario + ilustración -->
         <section class="registro-content">
           <!-- FORMULARIO -->
