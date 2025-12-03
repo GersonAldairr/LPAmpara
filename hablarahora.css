@@ -31,11 +31,6 @@ body {
   gap: 0.6rem;
 }
 
-.nav-logo {
-  width: 40px;
-  height: auto;
-}
-
 .nav-title {
   font-size: 1.6rem;
   font-weight: 600;
@@ -91,7 +86,7 @@ body {
 .talk-hero {
   background-color: #482983;
   color: #ffffff;
-  padding: 8rem 10rem 10rem;
+  padding: 4rem 2rem 5rem; 
 }
 
 .talk-inner {
@@ -99,10 +94,45 @@ body {
   margin: 0 auto;
 }
 
-.talk-inner h1 {
+.talk-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.talk-header h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+}
+
+/* Botón de volver (ya lo tienes, esto está bien) */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Ajuste en móvil */
+@media (max-width: 600px) {
+  .talk-header {
+    gap: 0.6rem;
+  }
+
+  .talk-header h1 {
+    font-size: 2rem;
+  }
+
+  .back-btn img {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 /* Tarjetas de canales */
@@ -156,6 +186,19 @@ body {
   transform: translateY(-1px);
 }
 
+/* Botón de volver */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .navbar {
@@ -166,24 +209,19 @@ body {
     gap: 1.5rem;
   }
 
-  .talk-inner h1 {
-    font-size: 2rem;
-    text-align: center;
+  .talk-hero {
+    padding: 3rem 1.5rem 4rem;
   }
 }
 
 @media (max-width: 600px) {
+ 
   .navbar {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .nav-right {
-    margin-top: 0.5rem;
+    padding: 0.9rem 1.2rem;
   }
 
   .talk-hero {
-    padding-inline: 1.25rem;
+    padding: 2.5rem 1.25rem 3rem;
   }
 
   .talk-inner h1 {

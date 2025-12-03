@@ -3,94 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ampara - Ingreso Seguro</title>
+    <title>Registrarse - Ampara</title>
 
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="registro.css" />
     <link rel="stylesheet" href="Pie.css" />
 
-    <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <!-- Header con imagen decorativa -->
-    <header class="header-banner" aria-label="Header Ampara">
+    <header class="registro-header">
+      <!-- Flecha para volver al login -->
       <a
-        href="index.html"
-        class="back-btn"
-        aria-label="Volver a la página principal"
+        href="login.html"
+        class="back-arrow"
+        aria-label="Volver al inicio de sesión"
       >
-        ← Volver al inicio
+        ←
       </a>
-    </header>
 
-    <!-- Contenedor general del login -->
-    <main class="login-container">
-      <!-- Card del login -->
-      <div class="login-card">
-        <!-- Logo circular -->
-        <div class="logo-circle">
-          <img src="icons/logo_circular.png" alt="Logo Ampara" />
-          <!-- Si no tienes logo activo:
-          <h2>Ampara</h2>
-          -->
-        </div>
+      <div class="registro-header-inner">
+        <h1>Regístrate como</h1>
 
-        <h1 class="login-title">Bienvenida de vuelta</h1>
-
-        <form onsubmit="return validarLogin(event);" class="login-form">
-          <input
-            type="text"
-            id="email"
-            placeholder="Alias o correo"
-            class="input-field"
-            required
-          />
-
-          <input
-            type="password"
-            id="password"
-            placeholder="Contraseña"
-            class="input-field"
-            required
-          />
-
-          <a href="recuperar.html" class="forgot-password">
-            ¿Olvidaste tu contraseña?
-          </a>
-
-          <button type="submit" class="login-btn">Ingresar</button>
-
-          <div class="social-login">
-            <button type="button" class="social-btn">
-              <img
-                src="icons/google-circle.png"
-                alt="Iniciar sesión con Google"
-              />
-            </button>
-            <button type="button" class="social-btn">
-              <img
-                src="icons/facebook_logo.png"
-                alt="Iniciar sesión con Facebook"
-              />
-            </button>
-            <button type="button" class="social-btn">
-              <img src="icons/apple.png" alt="Iniciar sesión con Apple" />
-            </button>
+        <!-- Barra de progreso (3 pasos) -->
+        <div class="progress-steps">
+          <div class="progress-step active">
+            <span class="step-circle">1</span>
+            <span class="step-label">Tipo de usuario</span>
           </div>
 
-          <p class="create-account">
-            ¿No tienes una cuenta? <a href="Registrar_html">Crear una cuenta</a>
-          </p>
-        </form>
+          <div class="progress-step">
+            <span class="step-circle">2</span>
+            <span class="step-label">Datos de registro</span>
+          </div>
+
+          <div class="progress-step">
+            <span class="step-circle">3</span>
+            <span class="step-label">Confirmación</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="registro-container">
+      <!-- CARD 1: Usuario Normal -->
+      <div
+        class="registro-card"
+        onclick="window.location.href='registro_usuario.html'"
+      >
+        <img
+          src="icons/avatarPerfil.png"
+          alt="Usuario Normal"
+          class="registro-icon"
+        />
+        <h2>Usuario normal</h2>
+        <p>
+          Accede a las funcionalidades de la plataforma registrándote como
+          usuaria.
+        </p>
+      </div>
+
+      <!-- CARD 2: Psicólogo -->
+      <div
+        class="registro-card"
+        onclick="window.location.href='registro_psicologo.html'"
+      >
+        <img
+          src="icons/avatarPsico.png"
+          alt="Psicólogo"
+          class="registro-icon"
+        />
+        <h2>Psicólogo especialista</h2>
+        <p>
+          Accede a las funcionalidades especiales registrándote como psicólogo.
+        </p>
       </div>
     </main>
-
     <!-- PIE DE PAGINA -->
 
     <section id="footer">
@@ -142,6 +135,5 @@
         </div>
       </footer>
     </section>
-    <script src="login.js"></script>
   </body>
 </html>
