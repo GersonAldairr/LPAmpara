@@ -9,36 +9,76 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="hablarahora.css" />
-    <link rel="stylesheet" href="Pie.css" />
     <link rel="stylesheet" href="ampara.css" />
+
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="hablarahora.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
     <header class="navbar">
       <div class="nav-left">
-        <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
       </div>
 
       <nav class="nav-links">
-        <a href="index.html" class="btn-sos">SOS</a>
+        <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+        <a href="#" class="btn-sos">SOS</a>
         <a href="#">Servicios</a>
-        <a href="#">Noticias</a>
+        <a href="#">Articulos</a>
         <a href="#">Nosotros</a>
       </nav>
 
       <div class="nav-right">
-        <a href="#" class="btn-login">Mi cuenta</a>
+        <!-- opcional: botón cuenta -->
+        <a href="#" class="btn-cuenta">Mi cuenta</a>
+
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+
+          <a href="servicios.html">Servicios</a>
+          <a href="#">Articulos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
     <!-- CONTENIDO PRINCIPAL -->
     <main>
       <!-- SECCIÓN MORADA -->
       <section class="talk-hero">
         <div class="talk-inner">
-          <h1>¿Necesitas ayuda ahora?</h1>
+          <div class="talk-header">
+            <a href="ampara.html" class="back-btn">
+              <img src="icons/atras.png" alt="Volver al inicio" />
+            </a>
+            <h1>¿Necesitas ayuda ahora?</h1>
+          </div>
 
           <div class="channel-grid">
             <!-- CARD 1 -->
@@ -75,55 +115,49 @@
       </section>
     </main>
 
-    <!-- PIE DE PAGINA -->
-
-    <section id="footer">
-      <footer class="footer">
-        <div class="footer-container">
-          <!-- Logo y nombre de sitio -->
-          <div class="footer-brand">
-            <img
-              src="icons/logo_ampara_footer.png"
-              alt="Logo"
-              class="footer-logo"
-            />
-            <small>© 2025 Todos los derechos reservados</small>
-          </div>
-
-          <!-- Enlaces legales -->
-          <div class="footer-links">
-            <h4>Legal</h4>
-            <a href="Documentos/Política de Privacidad.pdf"
-              >Política de Privacidad</a
-            >
-            <!-- Dentro de href llama a un documento pdf con la poltica-->
-            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
-              >Términos y Condiciones</a
-            >
-            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
-            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
-          </div>
-
-          <!-- Redes sociales con íconos personalizados -->
-          <div class="footer-social">
-            <h4>Síguenos</h4>
-            <a href="https://www.facebook.com/"
-              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
-            /></a>
-            <a href="https://www.instagram.com/"
-              ><img
-                src="icons/instagram.png"
-                alt="Instagram"
-                class="social-icon"
-            /></a>
-            <a href="https://www.youtube.com/"
-              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
-            /></a>
-            <a href="https://x.com/"
-              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
-            /></a>
-          </div>
+    <!-- FOOTER (EL MISMO DE ANTES) -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo y nombre de sitio -->
+        <div class="footer-brand">
+          <img
+            src="icons/logo_ampara_footer.png"
+            alt="Logo"
+            class="footer-logo"
+          />
+          <small>© 2025 Todos los derechos reservados</small>
         </div>
-      </footer>
-    </section>
+
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/Documentos/politicaprivacidad.pdf"
+            >Política de Privacidad</a
+          >
+          <a href="/Documentos/terminosycondiciones.pdf"
+            >Términos y Condiciones</a
+          >
+          <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#"
+            ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icons/instagram.png" alt="Instagram" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icons/youtube.png" alt="YouTube" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="menu_hamburguesa.js"></script>
+  </body>
 </html>
