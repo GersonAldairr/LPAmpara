@@ -139,6 +139,11 @@
   font-size: 0.95rem;
 }
 
+.account-layout a{
+  text-decoration: none;
+  color: #482983;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
   .account-layout {
