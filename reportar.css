@@ -188,7 +188,7 @@
 
 .btn-sendReport{
     background-color: #482983;
-    color: white;
+    color: white!important;
     padding: .5rem 1rem;
     border-radius: 1rem;
     border: none;
