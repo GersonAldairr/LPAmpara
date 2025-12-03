@@ -1,129 +1,23 @@
-/*PANTALLA PERFIL*/
-.section-profile{
-  display: flex;
-  gap: 1.5rem;
-}
-.opc-profile{
-  background-color: rgb(255, 255, 255);
-  font-family: 'Poppins',sans-serif;
-  padding: 2rem;
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
 
-.opc-profile ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  line-height: 3.2rem;
-}
-
-.opc-profile li{
-  margin: 0;
-  padding: 0.75rem 0rem;
-}
-
-.opc-profile a{
-  text-decoration: none;
-}
-
-.opc-img img{
-  width: 1rem;
-  height: auto;
-  display: flex;
-  align-items: center;
-}
-
-.option{
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.opc-txt h5{
-  color: #482983;
-  font-weight: 300;
-}
-
-.div-inf{
-  flex: 1;
-  font-family: 'Poppins',sans-serif;
-  padding: 1rem;
-  color: #482983;
-}
-
-.inf-contact p{
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-.inf-card{
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-  background-color: white;
-}
-
-.inf-detail{
-  color:#909090;
-  margin-left: 1.5rem;
-  line-height: 2rem;
-}
-
-.inf-detail p{
-  font-size: 0.8rem;
-}
-
-.btn-edit {
-  background-color: #482983;
-  color: white;
-  border-radius: 1rem;
-  border: none;
-  padding: 0.625rem 0.625rem;
-  margin-right: 0.625rem;
-  text-decoration: none;
-  font-size: 0.75rem;
-}
-
-.hidden {
-  display: none;
-}
-.content-panel{
-  padding: 1rem;
-  background-color: #ffffff;
-  border-radius: 1rem;
-}
-
-.profile-link.active .opc-txt h5{
-  color: #482983;
-  font-weight: 600;
-}
-
-.profile-link.active {
-  border-left: 0.625rem solid transparent;
-  padding-left: 0.5rem;
-}
-
-@media(max-width:768px){
-  .navbar{
-    justify-content: center;
-    border-bottom: 0.05rem solid #482983;
-  }
-  .section-profile{
-    background-color: #f8eefc;
-  }
-  .nav-links{
-    display: none;
-  }
-  .nav-right{
-    display: none;
-  }
-
-  .opc-profile li{
-    border-bottom: 0.05rem solid #482983;
-  }
-
-  .opc-img img{
-    width: 1.8rem;
+.profile img{
+    width: 5rem;
     height: auto;
-  }
+}
+
+.opc-profile{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.card-profile{
+    background-color: white;
+    width: 50%;
 }
