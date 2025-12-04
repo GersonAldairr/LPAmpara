@@ -54,7 +54,11 @@
         <!-- Contenedor principal: formulario + ilustración -->
         <section class="registro-content">
           <!-- FORMULARIO -->
-          <form class="registro-form">
+          <form
+  class="registro-form"
+  id="formRegistro"
+  action="confirmacion.html"
+>
             <div class="form-group">
               <label for="alias">Alias</label>
               <input
@@ -200,5 +204,23 @@
         </div>
       </footer>
     </section>
+    <script>
+      document
+        .getElementById("formRegistro")
+        .addEventListener("submit", function (e) {
+          const password = document.getElementById("password").value.trim();
+
+          // 1) Validar longitud de contraseña
+          if (password.length < 8) {
+            e.preventDefault();
+            alert("La contraseña debe tener al menos 8 caracteres.");
+            return;
+          }
+
+
+        });
+    </script>
+  </body>
+</html>s
   </body>
 </html>
