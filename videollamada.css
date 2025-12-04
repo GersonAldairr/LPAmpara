@@ -26,10 +26,37 @@
   color: #ffffff;
 }
 
-.secure-video-title {
-  font-size: 48px;
-  font-weight: 700;
+/* Flecha + título "Videollamada segura" */
+.secure-video-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin-bottom: 16px;
+}
+
+.back-video {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-video img {
+  width: clamp(24px, 4vw, 36px);
+  height: clamp(24px, 4vw, 36px);
+  display: block;
+}
+
+/* Como el margin ahora lo tiene la fila, el h1 ya no lo necesita */
+.secure-video-title {
+  margin-bottom: 0;
+}
+
+/* En tablet/móvil centramos título + flecha */
+@media (max-width: 1024px) {
+  .secure-video-title-row {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .secure-video-subtitle {
@@ -120,6 +147,13 @@
   font-size: 18px;
   cursor: pointer;
   color: #7b649f;
+}
+/* Que el link de la X se vea igual que el botón */
+.video-header-close {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ----- CUERPO: VIDEO PRINCIPAL + MINI VISTA ----- */

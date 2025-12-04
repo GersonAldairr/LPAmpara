@@ -86,22 +86,29 @@
 
     <main class="secure-call-page">
       <section class="secure-call-layout">
-        <!-- COLUMNA IZQUIERDA: título + descripción + ilustración -->
-        <div class="secure-call-info">
-          <h1 class="secure-call-title">Llamada segura</h1>
-          <p class="secure-call-subtitle">
-            Habla con una psicóloga de manera confidencial y segura. Esta
-            llamada está asociada a tu cuenta y no se comparte con nadie más.
-          </p>
+        <!-- COLUMNA IZQUIERDA: flecha + título + descripción + ilustración -->
+<div class="secure-call-info">
 
-          <div class="secure-call-illustration">
-            <!-- Cambia la ruta por la ilustración que tengas -->
-            <img
-              src="image/ilustracion.png"
-              alt="Mujer hablando por teléfono"
-            />
-          </div>
-        </div>
+  <div class="secure-call-title-row">
+    <a href="hablarahora.html" class="back-call" aria-label="Volver">
+      <img src="icons/atras.png" alt="Volver" />
+    </a>
+
+    <h1 class="secure-call-title">Llamada segura</h1>
+  </div>
+
+  <p class="secure-call-subtitle">
+    Habla con una psicóloga de manera confidencial y segura. Esta
+    llamada está asociada a tu cuenta y no se comparte con nadie más.
+  </p>
+
+  <div class="secure-call-illustration">
+    <img
+      src="image/ilustracion.png"
+      alt="Mujer hablando por teléfono"
+    />
+  </div>
+</div>
 
         <!-- COLUMNA DERECHA: tarjeta de llamada -->
         <div class="secure-call-panel">
@@ -119,22 +126,23 @@
                 </div>
               </div>
 
-              <div class="call-card-actions">
-                <button
-                  type="button"
-                  class="call-header-btn"
-                  aria-label="Más opciones"
-                >
-                  •••
-                </button>
-                <button
-                  type="button"
-                  class="call-header-btn"
-                  aria-label="Cerrar llamada"
-                >
-                  ✕
-                </button>
-              </div>
+<div class="call-card-actions">
+  <button
+    type="button"
+    class="call-header-btn"
+    aria-label="Más opciones"
+  >
+    •••
+  </button>
+
+  <a
+    href="hablarahora.html"
+    class="call-header-btn call-header-close"
+    aria-label="Cerrar llamada"
+  >
+    ✕
+  </a>
+</div>
             </header>
 
             <!-- CUERPO DE LA TARJETA -->

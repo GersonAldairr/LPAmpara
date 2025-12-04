@@ -87,12 +87,19 @@
       <section class="secure-video-layout">
         <!-- COLUMNA IZQUIERDA -->
         <div class="secure-video-info">
-          <h1 class="secure-video-title">Videollamada segura</h1>
-          <p class="secure-video-subtitle">
-            Conéctate cara a cara con una psicóloga en un entorno confidencial.
-            Tu videollamada está protegida y asociada a tu cuenta.
-          </p>
-        </div>
+  <div class="secure-video-title-row">
+    <a href="hablarahora.html" class="back-video" aria-label="Volver">
+      <img src="icons/atras.png" alt="Volver" />
+    </a>
+
+    <h1 class="secure-video-title">Videollamada segura</h1>
+  </div>
+
+  <p class="secure-video-subtitle">
+    Conéctate cara a cara con una psicóloga en un entorno confidencial.
+    Tu videollamada está protegida y asociada a tu cuenta.
+  </p>
+</div>
 
         <!-- COLUMNA DERECHA: TARJETA DE VIDEOLLAMADA -->
         <div class="secure-video-panel">
@@ -108,21 +115,22 @@
               </div>
 
               <div class="video-card-actions">
-                <button
-                  type="button"
-                  class="video-header-btn"
-                  aria-label="Más opciones"
-                >
-                  •••
-                </button>
-                <button
-                  type="button"
-                  class="video-header-btn"
-                  aria-label="Cerrar videollamada"
-                >
-                  ✕
-                </button>
-              </div>
+  <button
+    type="button"
+    class="video-header-btn"
+    aria-label="Más opciones"
+  >
+    •••
+  </button>
+
+  <a
+    href="hablarahora.html"
+    class="video-header-btn video-header-close"
+    aria-label="Cerrar videollamada"
+  >
+    ✕
+  </a>
+</div>
             </header>
 
             <!-- CUERPO: VIDEO PRINCIPAL + MINIATURA -->

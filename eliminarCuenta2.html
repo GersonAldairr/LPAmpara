@@ -105,7 +105,7 @@
           </button>
 
           <!-- Puedes cambiar el saludo según el nombre del psicólogo -->
-          <div class="sidebar-hello">
+            <div class="sidebar-hello">
             <p class="hello-label">¡HOLA,</p>
             <p class="hello-name">DRA. ANA!</p>
           </div>
@@ -139,116 +139,21 @@
           </nav>
         </aside>
 
-        <!-- Lado derecho -->
+<!-- Lado derecho -->
         <section class="account-main">
-          <h1 class="account-title">Mi perfil profesional</h1>
+          <h1 class="account-title">Eliminar Cuenta</h1>
 
-          <!-- Bloque datos profesionales -->
-          <article class="account-card" id="card-datos">
-            <header class="account-card-header">
-              <h2>Datos profesionales</h2>
-              <button class="btn-outline edit-btn" data-target="card-datos">
-                Editar
-              </button>
-            </header>
-
-            <div class="account-card-body">
-              <div class="field-group">
-                <p class="field-label">Nombre</p>
-                <p class="field-value" data-field="nombre">Ana</p>
-                <input
-                  class="field-input"
-                  data-input="nombre"
-                  type="text"
-                  value="Ana"
-                />
+          <div class="container-delete">
+            <h3>¿Estas seguro de que deseas eliminar tu cuenta?</h3>
+            <div class="btns">
+              <div class="btn-cancell-delete">
+                <a href="mi_cuenta2.html">Cancelar</a>
               </div>
-
-              <div class="field-group">
-                <p class="field-label">Apellido</p>
-                <p class="field-value" data-field="apellido">Pérez</p>
-                <input
-                  class="field-input"
-                  data-input="apellido"
-                  type="text"
-                  value="Pérez"
-                />
-              </div>
-
-              <div class="field-group">
-                <p class="field-label">Especialidad</p>
-                <p class="field-value" data-field="especialidad">
-                  Psicología Clínica
-                </p>
-                <input
-                  class="field-input"
-                  data-input="especialidad"
-                  type="text"
-                  value="Psicología Clínica"
-                />
-              </div>
-
-              <div class="field-group">
-                <p class="field-label">N° de colegiatura</p>
-                <p class="field-value" data-field="colegiatura">C.Ps.P 12345</p>
-                <input
-                  class="field-input"
-                  data-input="colegiatura"
-                  type="text"
-                  value="C.Ps.P 12345"
-                />
+              <div class="btn-delete">
+                <a href="index.html">Eliminar cuenta</a>
               </div>
             </div>
-          </article>
-
-          <!-- Bloque correo -->
-          <article class="account-card" id="card-correo">
-            <header class="account-card-header">
-              <h2>Correo profesional</h2>
-              <button class="btn-outline edit-btn" data-target="card-correo">
-                Editar
-              </button>
-            </header>
-
-            <div class="account-card-body">
-              <div class="field-group">
-                <p class="field-label">Correo</p>
-                <p class="field-value" data-field="correo">
-                  ana.psicologa@ampara.com
-                </p>
-                <input
-                  class="field-input"
-                  data-input="correo"
-                  type="email"
-                  value="ana.psicologa@ampara.com"
-                />
-              </div>
-            </div>
-          </article>
-
-          <!-- Bloque contraseña -->
-          <article class="account-card" id="card-pass">
-            <header class="account-card-header">
-              <h2>Contraseña</h2>
-              <button class="btn-outline edit-btn" data-target="card-pass">
-                Editar
-              </button>
-            </header>
-
-            <div class="account-card-body">
-              <div class="field-group">
-                <p class="field-label">Contraseña</p>
-                <p class="field-value" data-field="password">********</p>
-                <input
-                  class="field-input"
-                  data-input="password"
-                  type="password"
-                  value=""
-                  placeholder="Ingresa tu nueva contraseña"
-                />
-              </div>
-            </div>
-          </article>
+          </div>
         </section>
       </section>
     </main>

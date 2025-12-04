@@ -50,6 +50,38 @@
   display: block;
 }
 
+/* Flecha + título "Llamada segura" */
+.secure-call-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 16px;          /* reemplaza al margin-bottom del título */
+}
+
+.back-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-call img {
+  width: clamp(24px, 4vw, 36px);
+  height: clamp(24px, 4vw, 36px);
+  display: block;
+}
+
+/* Como ahora el margin está en la fila, quitamos el del h1 */
+.secure-call-title {
+  margin-bottom: 0;
+}
+
+/* En tablet/móvil centramos título + flecha */
+@media (max-width: 1024px) {
+  .secure-call-title-row {
+    justify-content: center;
+  }
+}
+
 /* ===== PANEL DERECHA (TARJETA LLAMADA) ===== */
 
 .secure-call-panel {
@@ -252,5 +284,21 @@
   .call-card-body,
   .call-card-footer {
     padding: 16px 18px;
+  }
+}
+
+/* Flecha + título "Llamada segura" */
+
+
+.back-call img {
+  width: clamp(24px, 4vw, 36px);
+  height: clamp(24px, 4vw, 36px);
+  display: block;
+}
+
+/* En móvil centramos el título + flecha */
+@media (max-width: 1024px) {
+  .secure-call-title-row {
+    justify-content: center;
   }
 }

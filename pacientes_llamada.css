@@ -18,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  position: relative;
 }
 
 .app-card {
@@ -410,7 +411,7 @@ main.main-content {
 .back-floating {
   position: absolute;
   top: 1.5rem;
-  left: 1.5rem;            /* ahora va a la IZQUIERDA */
+  left: 1.5rem;            /* IZQUIERDA */
   border: none;
   background: transparent;
   padding: 0;

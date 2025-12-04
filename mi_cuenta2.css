@@ -120,6 +120,11 @@
   color: #ff4c6a;
 }
 
+.account-menu-item:hover {
+  background-color: #f1e6ff;
+  transform: translateX(4px);
+  transition: 0.2s;
+}
 /* =========================================================
      MAIN CONTENT
      ========================================================= */
