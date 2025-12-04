@@ -13,6 +13,7 @@
     <!-- Estilos globales + mismos de mi_cuenta2 -->
     <link rel="stylesheet" href="ampara.css" />
     <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="eliminarCuenta.css" />
     <link rel="stylesheet" href="menu_hamburguesa.css" />
     <link rel="stylesheet" href="mi_cuenta2.css" />
   </head>
@@ -31,7 +32,7 @@
       </nav>
 
       <div class="nav-right">
-        <a href="mi_cuenta_psicologo.html" class="btn-cuenta">Mi cuenta</a>
+        <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
 
         <button
           class="btn-burger"
@@ -53,7 +54,7 @@
 
           <div class="user-info">
             <p class="user-name">Dra. Ana</p>
-            <a href="mi_cuenta_psicologo.html" class="user-link"
+            <a href="mi_cuenta2.html" class="user-link"
               >Ver mi perfil</a
             >
           </div>
@@ -101,35 +102,37 @@
             </p>
           </button>
 
-          <div class="sidebar-hello">
+          <!-- Puedes cambiar el saludo según el nombre del psicólogo -->
+            <div class="sidebar-hello">
             <p class="hello-label">¡HOLA,</p>
             <p class="hello-name">DRA. ANA!</p>
           </div>
 
+          <!-- Opciones de cuenta para psicólogo -->
           <nav class="account-menu">
-            <button class="account-menu-item">
+            <button class="account-menu-item is-active">
               <span class="icon">👤</span>
-              <span>Perfil</span>
+              <a href="mi_cuenta2.html">Perfil</a>
             </button>
 
             <button class="account-menu-item">
               <span class="icon">🔔</span>
-              <span>Notificaciones</span>
+              <a href="">Notificaciones</a>
             </button>
 
             <button class="account-menu-item">
               <span class="icon">🛠</span>
-              <span>Reportar un problema</span>
+              <a href="reportar2.html">Reportar un problema</a>
             </button>
 
             <button class="account-menu-item">
               <span class="icon">🔄</span>
-              <span>Cerrar sesión</span>
+              <a href="login.html">Cerrar sesión</a>
             </button>
 
             <button class="account-menu-item danger">
               <span class="icon">✖</span>
-              <span>Eliminar cuenta</span>
+              <a href="eliminarCuenta2.html">Eliminar cuenta</a>
             </button>
           </nav>
         </aside>
