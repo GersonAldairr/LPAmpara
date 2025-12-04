@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="ampara.css" />
     <link rel="stylesheet" href="Pie.css" />
     <link rel="stylesheet" href="menu_hamburguesa.css" />
-    <link rel="stylesheet" href="favoritos.css" />
+    <link rel="stylesheet" href="eliminarCuenta.css"/>
   </head>
 
   <body>
@@ -26,7 +26,7 @@
 
       <nav class="nav-links">
         <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
-        <a href="#" class="btn-sos">SOS</a>
+        <a href="sos.html" class="btn-sos">SOS</a>
         <a href="servicios.html">Servicios</a>
         <a href="#">Articulos</a>
         <a href="nosotros.html">Nosotros</a>
@@ -34,7 +34,7 @@
 
       <div class="nav-right">
         <!-- opcional: botón cuenta -->
-        <a href="#" class="btn-cuenta">Mi cuenta</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
 
         <button
           class="btn-burger"
@@ -93,7 +93,7 @@
               <a href="">Historial</a>
             </button>
 
-            <button class="account-menu-item is-active">
+            <button class="account-menu-item">
               <span class="icon">💜</span>
               <a href="favoritos.html">Favoritos</a>
             </button>
@@ -113,98 +113,28 @@
               <a href="">Cerrar sesión</a>
             </button>
 
-            <button class="account-menu-item danger">
+            <button class="account-menu-item danger is-active">
               <span class="icon">✖</span>
-              <a href="">Eliminar cuenta</a>
+              <a href="eliminarCuenta.html">Eliminar cuenta</a>
             </button>
           </nav>
         </aside>
 
         <!-- Lado derecho -->
         <section class="account-main">
-          <h1 class="account-title">Favoritos</h1>
+          <h1 class="account-title">Eliminar Cuenta</h1>
 
-          <!-- Bloque Noticias -->
-          <article class="account-card">
-            <header class="account-card-header">
-              <h2>Noticias</h2>
-            </header>
-
-            <div class="account-card-body">
-              <div class="new">
-                <div class="field-group">
-                  <p class="field-label">Noticia #1</p>
-                  <img src="image/noticia1.png" alt="noticia">
+          <div class="container-delete">
+            <h3>¿Estas seguro de que deseas eliminar tu cuenta?</h3>
+            <div class="btns">
+                <div class="btn-cancell-delete">
+                    <a href="">Cancelar</a>
                 </div>
-
-                <div class="field-group">
-                  <p class="field-label">Descripcion</p>
-                  <p class="field-value">Con motivo del Día Internacional de la Eliminación de la Violencia contra la Mujer, el Instituto Nacional de Estadística e Informática (INEI) reveló que, de acuerdo con la Encuesta Demográfica y de Salud Familiar (Endes 2022), el 35.6% de las mujeres de entre 15 y 49 años fueron víctimas de violencia familiar en los últimos 12 meses anteriores a la encuesta. El 34.8% indicó que en los últimos 12 meses había sido víctima de agresión psicológica y/o verbal; el 8.1%, de violencia física; y el 2.2%, de violencia sexual.</p>
+                <div class="btn-delete">
+                    <a href="">Eliminar cuenta</a>
                 </div>
-              </div>
-              <div class="new">
-                <div class="field-group">
-                  <p class="field-label">Noticia #2</p>
-                  <img src="image/noticia2.png" alt="noticia">
-                </div>
-
-                <div class="field-group">
-                  <p class="field-label">Descripcion</p>
-                  <p class="field-value">Lima, 25 nov (EFE).- Los centros médicos del Ministerio de Salud de Perú atendieron 176.925 casos de violencia contra la mujer, de enero a octubre de este año, donde la mayoría fueron adultas, de 30 a 59 años de edad, con 60.604 casos, y adolescentes con 44.662 incidencias, según informó este martes esa cartera. En el Día Internacional de la Eliminación de la Violencia contra la Mujer, el ministerio peruano subrayó que este tipo de violencia no solo deja huellas físicas; sino también genera efectos profundos en la salud mental, el bienestar social y el desarrollo de niñas, niños, adolescentes, mujeres adultas y comunidades. La directora ejecutiva de la Dirección de Salud Mental del ministerio, July Caballero, declaró que la violencia contra la mujer constituye un problema de salud pública y una grave violación de los derechos humanos. La cifra reportada hasta octubre pasado detalló que los casos contra mujeres jóvenes, de 18 a 29 años, ascendieron a 36.094, las denuncias contra niñas y niños a 30.694 y contra personas adultas mayores a 8.951 incidencias.</p>
-                </div>
-              </div>
             </div>
-          </article>
-
-          <!-- Bloque directorios -->
-          <article class="account-card">
-            <header class="account-card-header">
-              <h2>Directorios</h2>
-            </header>
-
-            <div class="account-card-body">
-              <ul class="directory-list">
-                <li class="directory-item">
-                  <div class="directory-info">
-                    <strong>Telefono de emergencia - Policia</strong>
-                    <div class="directory-meta">Linea 24/7</div>
-                  </div>
-                  <div class="directory-actions">
-                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +51 094 567 456</a></a>
-                  </div>
-                </li>
-                <li class="directory-item">
-                  <div class="directory-info">
-                    <strong>Linea de Ayuda - ONG Aurora</strong>
-                    <div class="directory-meta">Atencion psicologica</div>
-                  </div>
-                  <div class="directory-actions">
-                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +51 123 456 789</a></a>
-                  </div>
-                </li>
-                <li class="directory-item">
-                  <div class="directory-info">
-                    <strong>Linea 100</strong>
-                    <div class="directory-meta">Orientacion y soporte emocional</div>
-                  </div>
-                  <div class="directory-actions">
-                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +01 100</a></a>
-                  </div>
-                </li>
-                <li class="directory-item">
-                  <div class="directory-info">
-                    <strong>Centros de emergencia Mujer y Familia</strong>
-                    <div class="directory-meta">Atencion integral y multidisciplinaria</div>
-                  </div>
-                  <div class="directory-actions">
-                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +01 419 726 0</a></a>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-          </article>
-
+          </div>
           
         </section>
       </section>
@@ -259,7 +189,10 @@
         </div>
       </footer>
     </section>
+    <div id="deleteMessage" class="delete-message"></div>
     <script src="menu_hamburguesa.js"></script>
     <script src="mi_cuenta.js"></script>
+    <script src="reportar.js"></script>
+    <script src="eliminarCuenta.js"></script>
   </body>
 </html>

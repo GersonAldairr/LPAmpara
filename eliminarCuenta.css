@@ -116,47 +116,104 @@
   cursor: pointer;
 }
 
-/* NEWS: cada noticia apilada (imagen izq, texto der). */
-.news-list {
-  display: flex;
-  flex-direction: column;
+.account-card-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.2rem;
 }
 
-/* Cada noticia */
-.new {
-  display: grid;
-  grid-template-columns: 160px 1fr; /* miniatura + contenido */
-  gap: 1rem;
-  align-items: start;
-  padding: 0.6rem;
-  border-radius: 10px;
-  background: transparent; /* cambia si quieres fondo */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 }
 
-/* imagen de la noticia (dentro del primer .field-group) */
-.new .field-group img {
-  width: 160px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
+.field-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #8d81b3;
 }
 
-/* Asegura que la descripción ocupe el resto */
-.new .field-group + .field-group {
-  align-self: start;
-}
-
-/* Espaciado entre artículos (opcional) */
-.account-card-body .new + .new {
-  margin-top: 0.6rem;
+.field-value {
+  font-size: 0.95rem;
 }
 
 .account-layout a{
   text-decoration: none;
   color: #482983;
 }
+
+.container-delete{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-delete h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10rem;
+}
+
+.btn-cancell-delete{
+    padding: 1rem;
+    background: transparent;
+    border-radius: 1rem;
+    border: 0.05rem solid #482983;
+}
+
+.btn-delete{
+    padding: 1rem;
+    background: transparent;
+    border-radius: 1rem;
+    border: 0.05rem solid #482983;
+}
+
+.btn-cancell-delete:hover{
+    background-color: #ff4c6a;
+    border: transparent;
+    color: white;
+}
+.btn-delete:hover{
+    background-color: #ff4c6a;
+    border: transparent;
+    color: white;
+}
+
+/* al hacer hover en el contenedor, forzamos que el enlace dentro sea blanco */
+.btn-cancell-delete:hover a,
+.btn-delete:hover a {
+  color: #ffffff;
+}
+
+.delete-message {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #482983;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+  z-index: 9999;
+}
+
+.delete-message.show {
+  opacity: 1;
+}
+
+
 
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
@@ -167,6 +224,13 @@
   .account-page {
     padding: 1.5rem 1.25rem;
   }
+
+    .btns{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 6rem;
+    }
+
 }
 
 /* Versión tipo “Yanbal mobile”: sidebar como lista grande */
@@ -184,3 +248,4 @@
     border-bottom: 1px solid #f1e6ff;
   }
 }
+
