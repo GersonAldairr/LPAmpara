@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       number: "100",
       contactType: "tel",
       contactLink: "100",
-      icon: "linea 100.png",
+      icons: "linea_100.png",
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       number: "105",
       contactType: "chat",
       contactLink: "https://ejemplo.com/chat",
-      icon: "105.png",
+      icons: "105.png",
     },
     {
       id: 3,
@@ -29,17 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
       number: "101",
       contactType: "tel",
       contactLink: "101",
-      icon: "policia.png",
+      icons: "policia.png",
     },
     {
       id: 4,
-      name: "Atención a la Mujer",
+      name: "Atención Mujer",
       description:
         "Asesoría legal y psicológica especializada en casos de violencia de género.",
       number: "102",
       contactType: "tel",
       contactLink: "102",
-      icon: "atencion a la mujer.png",
+      icons: "atencion_mujer.png",
     },
   ];
 
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.innerHTML = `
         <div class="card-avatar">
             <img src="icons/${
-              line.icon || "avatar.png"
+              line.icons || "avatar.png"
             }" alt="Icono de Contacto">
         </div>
         <div class="card-details">
