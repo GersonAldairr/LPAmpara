@@ -1,6 +1,6 @@
 const textarea = document.getElementById("reportText");
 const btnCancel = document.querySelector(".btn-cancell");
-const btnSend = document.querySelector(".btn-send");
+const btnSend = document.querySelector(".btn-sendReport");
 const messageBox = document.getElementById("reportMessage");
 
 // Función para mostrar mensajes

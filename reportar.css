@@ -196,7 +196,7 @@
     font-weight: 700;
 }
 
-.btn-send[disabled]{
+.btn-sendReport[disabled]{
     opacity: .5;
     cursor: not-allowed;
 }
@@ -222,7 +222,7 @@
 @media (max-width: 520px){
   .box-input { min-height: 180px; }
   .btns { flex-direction: column-reverse; gap: .6rem; align-items: stretch; }
-  .btn-cancell, .btn-send { width: 100%; }
+  .btn-cancell, .btn-sendReport { width: 100%; }
 }
 
 /* ===== Responsive ===== */
