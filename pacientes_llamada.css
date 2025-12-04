@@ -406,3 +406,34 @@ main.main-content {
     text-align: center;
   }
 }
+/* ===== FLECHA DE REGRESO ESTILO AMPARA ===== */
+.back-floating {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;            /* ahora va a la IZQUIERDA */
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  text-decoration: none;
+}
+
+.back-floating img {
+  width: clamp(26px, 5vw, 50px);
+  height: clamp(26px, 5vw, 50px);
+  display: block;
+  background-color: #482983;  /* círculo morado */
+  border-radius: 999px;       /* bien redondito */
+}
+
+/* Ajustes en móvil */
+@media (max-width: 768px) {
+  .back-floating {
+    top: 1rem;
+    left: 1rem;
+  }
+}
