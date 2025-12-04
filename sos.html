@@ -84,7 +84,8 @@
           <p>Enviaremos una alerta en 05 seg</p>
         </div>
         <div class="sos-btns">
-          <a href="ampara.html" class="sos-btn1">Cancelar ahora</a>
+          <a href="#" id="cancelarSOS" class="sos-btn1">Cancelar ahora</a>
+
           <a href="#" class="sos-btn2">Enviar alerta</a>
         </div>
         <div class="sos-txt">
@@ -137,5 +138,16 @@
       </div>
     </footer>
     <script src="menu_hamburguesa.js"></script>
+    <script>
+  document.getElementById("cancelarSOS").addEventListener("click", () => {
+    const origen = sessionStorage.getItem("origenSOS");
+
+    if (origen) {
+      window.location.href = origen; // Regresa al origen real
+    } else {
+      window.location.href = "ampara.html"; // Si no existe, fallback
+    }
+  });
+</script>
   </body>
 </html>
