@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         number: "100",
         contactType: "tel", 
         contactLink: "100",
-        icon: "linea100.png",
+        icon: "linea_100.png",
       },
       {
         id: 2,
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         number: "105",
         contactType: "chat", 
         contactLink: "chatanonimo.html", 
-        icon: "chat105.png",
+        icon: "105.png",
       },
       {
         id: 3,
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         number: "102",
         contactType: "tel",
         contactLink: "102",
+        icon: "atencion_mujer"
       },
     ];
   
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="icons/${line.icon || "organizacion.png"}" alt="Icono" onerror="this.src='icons/organizacion.png'">
           </div>
           <div class="card-details">
-              <h3 class="line-name">${line.name}</h3>
+              <h3 claseds="line-name">${line.name}</h3>
               <p class="line-description">${line.description}</p>
               <p class="line-number">Número: <strong>${line.number}</strong></p>
           </div>
