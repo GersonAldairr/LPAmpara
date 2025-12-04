@@ -20,16 +20,29 @@ body {
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+/* Logo desktop vs móvil */
+.nav-logo-desktop {
+  display: inline-flex;
+}
+
+.nav-logo-mobile {
+  display: none; /* se mostrará solo en móvil */
+}
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo {
   width: 175px;
-  height: 48px;
+  height: auto;
 }
 
 .nav-title {
@@ -41,7 +54,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 10rem;
+  gap: 3rem;
 }
 
 .nav-links a {
@@ -57,12 +70,19 @@ body {
   color: #482983;
 }
 
+/* SOS de la navbar (desktop) */
 .btn-sos {
   background-color: #ff5b7f;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  color: white !important;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  color: #ffffff !important;
   font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-sos-desktop {
+  display: inline-block;
 }
 
 .btn-cuenta {
@@ -72,8 +92,28 @@ body {
   color: white;
   font-weight: 600;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Burger oculto en desktop */
+.btn-burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* SOS móvil (se muestra solo en mobile) */
+.nav-sos-mobile {
+  display: none;
+}
 /* ========== HERO ========== */
 .hero {
   position: relative;
@@ -153,18 +193,16 @@ body {
 }
 
 .feature-card {
-  display: block;
-  text-decoration: none;
-  color: #2b2140;
   background-color: white;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
-.feature-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.features-section a.feature-card {
+  text-decoration: none; /* sin subrayado */
+  color: inherit; /* hereda el color del texto normal */
+  display: block; /* que ocupe todo el espacio como card */
+  cursor: pointer; /* manito al pasar */
 }
 
 .feature-icon img {
@@ -182,122 +220,30 @@ body {
 }
 
 /* ========== RESPONSIVE ========== */
-
-/* Laptops / tablets horizontales */
-@media (max-width: 1100px) {
-  .navbar {
-    padding: 0.8rem 1.5rem;
-  }
-
-  .nav-links {
-    gap: 3rem; /* antes 10rem, para que no reviente */
-  }
-
-  .hero {
-    padding: 2.5rem 1.5rem;
-    min-height: 60vh;
-  }
-
-  .hero-text h1 {
-    font-size: 2.4rem;
-  }
-
-  .features-section {
-    padding: 3rem 1.5rem;
-  }
-}
-
-/* Tablets verticales */
 @media (max-width: 900px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .nav-left {
-    flex: 1 1 100%;
-    justify-content: space-between;
-  }
-
-  .nav-links {
-    flex: 1 1 100%;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
   .hero-content {
     flex-direction: column;
     text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   .hero-illustration img {
     width: 260px;
   }
 }
-
-/* Celulares */
-@media (max-width: 600px) {
-  .navbar {
-    padding: 0.7rem 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .nav-left {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-cuenta {
-    padding: 0.45rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .hero {
-    padding: 2rem 1rem;
-    min-height: auto;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
+/* Botones del hero en vista móvil */
+@media (max-width: 768px) {
   .hero-buttons {
-    flex-direction: column;
-    gap: 0.8rem;
+    display: flex;
+    flex-direction: column; /* uno debajo del otro */
+    gap: 0.8rem; /* espacio entre botones */
+    max-width: 260px; /* ancho cómodo */
+    margin: 1.4rem auto 0; /* centrado */
   }
 
   .btn-sos-hero,
   .btn-especialista {
-    width: 100%;
-    text-align: center;
-  }
-
-  .features-section {
-    padding: 2.5rem 1rem;
-    gap: 1.5rem;
-  }
-
-  .feature-card {
-    padding: 1.5rem;
+    width: 100%; /* que ocupen todo el ancho del contenedor */
+    display: flex;
+    justify-content: center; /* texto centrado */
   }
 }

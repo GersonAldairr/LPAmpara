@@ -19,21 +19,8 @@
   </head>
 
   <header class="navbar">
+    <!-- IZQUIERDA: solo burger -->
     <div class="nav-left">
-      <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
-    </div>
-
-    <nav class="nav-links">
-      <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
-      <a href="pacientes.html">Pacientes</a>
-      <a href="articulo_psicologo.html">Artículos</a>
-      <a href="#">Nosotros</a>
-    </nav>
-
-    <div class="nav-right">
-      <!-- opcional: botón cuenta -->
-      <a href="#" class="btn-cuenta">Mi cuenta</a>
-
       <button
         class="btn-burger"
         aria-label="Abrir menú"
@@ -43,12 +30,37 @@
         <span></span>
         <span></span>
       </button>
+
+      <!-- LOGO SOLO PARA DESKTOP -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+    </div>
+
+    <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+    <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+      <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+    </a>
+
+    <!-- CENTRO (solo desktop) -->
+    <nav class="nav-links">
+      <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="articulo_usuario.html">Artículos</a>
+      <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <!-- DERECHA -->
+    <div class="nav-right">
+      <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+      <a href="login.html" class="btn-cuenta">Mi cuenta</a>
     </div>
   </header>
 
   <!-- MENÚ MÓVIL -->
   <aside class="mobile-menu" aria-hidden="true">
     <div class="mobile-menu-panel">
+      <!-- CABECERA DEL MENÚ -->
       <div class="mobile-menu-header">
         <div class="user-avatar">F</div>
 
@@ -60,16 +72,14 @@
         <button class="btn-close" aria-label="Cerrar menú">✕</button>
       </div>
 
+      <!-- LINKS DEL MENÚ -->
       <nav class="mobile-menu-links">
-        <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
-        <a href="psicologo.html">Pacientes</a>
-        <a href="articulo_psicologo.html">Artículos</a>
-        <a href="#">Nosotros</a>
-        <a href="mi_cuenta.html">Mi cuenta</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
       </nav>
     </div>
   </aside>
-
     <!-- CONTENIDO PRINCIPAL -->
     <main>
       <section class="selftest-hero">

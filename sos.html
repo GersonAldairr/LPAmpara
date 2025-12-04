@@ -8,53 +8,93 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="ampara.css"/>
-    <link rel="stylesheet" href="Pie.css"/>
-    <link rel="stylesheet" href="sos.css"/>
-    <link rel="stylesheet" href="menu_toggle.css"/>
-    
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="sos.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
   </head>
-  
+
   <body>
-    
-    <!-- NAVBAR -->
     <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
       <div class="nav-left">
-        <img src="image/logo_morado.png" class="nav-logo" />
-        
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
       </div>
-      
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
       <nav class="nav-links">
-        <a href="sos.html" class="btn-sos">SOS</a>
-        <a href="#">Servicios</a>
-        <a href="#">Noticias</a>
-        <a href="#">Nosotros</a>
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
       </nav>
 
+      <!-- DERECHA -->
       <div class="nav-right">
-        <a href="micuenta.html" class="btn-cuenta">Mi cuenta</a>
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="login.html" class="btn-cuenta">Mi cuenta</a>
       </div>
     </header>
 
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <!-- CABECERA DEL MENÚ -->
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <!-- LINKS DEL MENÚ -->
+        <nav class="mobile-menu-links">
+          <a href="servicios.html">Servicios</a>
+          <a href="articulo_usuario.html">Artículos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
 
     <section class="sos-hero">
-        <div class="btn-back">
-            <a href="ampara.html">Regresar</a>
+      <div class="btn-back">
+        <a href="ampara.html">Regresar</a>
+      </div>
+      <div class="sos-inner">
+        <h2>SOS activado</h2>
+        <div class="sos-txt">
+          <p>Enviaremos una alerta en 05 seg</p>
         </div>
-        <div class = "sos-inner">
-            <h2>SOS activado</h2>
-            <div class = "sos-txt">
-                <p>Enviaremos una alerta en 05 seg</p>
-            </div>
-            <div class = "sos-btns">
-                <a href="#" class = "sos-btn1">Cancelar ahora</a>
-                <a href="#" class = "sos-btn2">Enviar alerta</a>
-            </div>
-            <div class = "sos-txt">
-                <p>Tu actividad se oculta del historial</p>
-            </div>
+        <div class="sos-btns">
+          <a href="ampara.html" class="sos-btn1">Cancelar ahora</a>
+          <a href="#" class="sos-btn2">Enviar alerta</a>
         </div>
+        <div class="sos-txt">
+          <p>Tu actividad se oculta del historial</p>
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER (EL MISMO DE ANTES) -->
@@ -100,5 +140,6 @@
         </div>
       </div>
     </footer>
+    <script src="menu_hamburguesa.js"></script>
   </body>
 </html>

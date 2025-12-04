@@ -16,15 +16,19 @@
     />
   </head>
   <body>
+  
+    <header class="registro-header">
+      <a href="login.html" class="back-arrow">←</a>
+    </header>
+  
     <main class="recover-layout">
       <section class="recover-card">
         <h1 class="recover-title">Recuperar contraseña</h1>
-
+  
         <p class="recover-text">
-          Ingresa tu correo y te enviaremos un enlace para restablecer tu
-          contraseña.
+          Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.
         </p>
-
+  
         <form onsubmit="enviarEnlace(event)" class="recover-form">
           <input
             type="email"
@@ -33,22 +37,24 @@
             placeholder="Ingresa tu correo electrónico"
             required
           />
-
-          <button type="submit" class="recover-btn">Enviar enlace</button>
+  
+          <button type="submit" class="recover-btn">
+            Enviar enlace
+          </button>
         </form>
-
+  
         <p class="recover-help">
-          Si el correo existe, te enviaremos un enlace para restablecer tu
-          contraseña.
+          Si el correo existe, te enviaremos un enlace para restablecer tu contraseña.
         </p>
-
+  
         <a href="login.html" class="volver-login">
           Volver al inicio de sesión
         </a>
       </section>
-      <!-- PIE DE PAGINA -->
 
-      <section id="footer">
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
         <footer class="footer">
           <div class="footer-container">
             <!-- Logo y nombre de sitio -->
@@ -60,7 +66,7 @@
               />
               <small>© 2025 Todos los derechos reservados</small>
             </div>
-
+  
             <!-- Enlaces legales -->
             <div class="footer-links">
               <h4>Legal</h4>
@@ -72,51 +78,44 @@
                 >Términos y Condiciones</a
               >
               <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
-              <a href="Documentos/LeyProteccionDatos.pdf"
-                >Protección de Datos</a
-              >
+              <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
             </div>
-
+  
             <!-- Redes sociales con íconos personalizados -->
             <div class="footer-social">
               <h4>Síguenos</h4>
-              <a href="https://www.facebook.com/"
-                ><img
-                  src="icons/facebook.png"
-                  alt="Facebook"
-                  class="social-icon"
+              <a href="#"
+                ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
               /></a>
-              <a href="https://www.instagram.com/"
+              <a href="#"
                 ><img
                   src="icons/instagram.png"
                   alt="Instagram"
                   class="social-icon"
               /></a>
-              <a href="https://www.youtube.com/"
+              <a href="#"
                 ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
               /></a>
-              <a href="https://x.com/"
+              <a href="#"
                 ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
               /></a>
             </div>
           </div>
         </footer>
-      </section>
     </main>
     <!-- MODAL ÉXITO (diseño distinto al de tu compa) -->
-    <div id="modal-exito" class="modal-overlay">
-      <div class="modal-card">
-        <h2 class="modal-title">¡Listo!</h2>
-        <p class="modal-text">
-          Si el correo está registrado en Ampara, te enviamos un enlace para
-          restablecer tu contraseña. Revisa tu bandeja de entrada y la carpeta
-          de spam.
-        </p>
-        <button type="button" class="modal-btn" onclick="cerrarExito()">
-          Entendido
-        </button>
-      </div>
+  <div id="modal-exito" class="modal-overlay">
+    <div class="modal-card">
+      <h2 class="modal-title">¡Listo!</h2>
+      <p class="modal-text">
+        Si el correo está registrado en Ampara, te enviamos un enlace para restablecer tu contraseña.
+        Revisa tu bandeja de entrada y la carpeta de spam.
+      </p>
+      <button type="button" class="modal-btn" onclick="cerrarExito()">
+        Entendido
+      </button>
     </div>
-    <script src="login.js"></script>
+  </div>
+  <script src="login.js"></script>
   </body>
 </html>

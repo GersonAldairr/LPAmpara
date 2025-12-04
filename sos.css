@@ -1,3 +1,107 @@
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+/* Logo desktop vs móvil */
+.nav-logo-desktop {
+  display: inline-flex;
+}
+
+.nav-logo-mobile {
+  display: none; /* se mostrará solo en móvil */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 175px;
+  height: auto;
+}
+
+.nav-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #482983;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1d1533;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: rgba(72, 41, 131, 0.12);
+  color: #482983;
+}
+
+/* SOS de la navbar (desktop) */
+.btn-sos {
+  background-color: #ff5b7f;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-sos-desktop {
+  display: inline-block;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Burger oculto en desktop */
+.btn-burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* SOS móvil (se muestra solo en mobile) */
+.nav-sos-mobile {
+  display: none;
+}
+
 .sos-hero {
   background-size: cover;
   background-position: center;
@@ -12,17 +116,17 @@
   position: relative;
 }
 
-.btn-back{
-    padding-top: 1.5rem;
+.btn-back {
+  padding-top: 1.5rem;
 }
 
-.btn-back a{
-    text-decoration: none;
-    border: 2px solid #9076bb;
-    border-radius: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color:#2d1b4d;
+.btn-back a {
+  text-decoration: none;
+  border: 2px solid #9076bb;
+  border-radius: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #2d1b4d;
 }
 
 .sos-inner {
@@ -32,7 +136,7 @@
   text-align: center;
   gap: 0.5rem;
   padding: 2rem;
-  
+
   border-radius: 1rem;
 }
 
@@ -55,7 +159,7 @@
   text-align: center;
 }
 
-.sos-btns{
+.sos-btns {
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -78,18 +182,17 @@
   font-size: 14px;
 }
 
-
 .sos-btn2 {
   background-color: #ff5b7f;
   color: #ffffff;
-  width: 240px;       
-  height: 240px;     
-  border-radius: 50%; 
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -123,18 +226,7 @@
   transition-delay: 0.15s; /* aparece un poco después */
 }
 
-/* Ocultar botón hamburguesa en desktop */
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: .4rem;
-}
-
-
 @media (max-width: 900px) {
-
   .menu-toggle {
     display: block; /* Mostrar botón hamburguesa en móviles */
     color: black;
@@ -157,8 +249,7 @@
     border-bottom: 1px solid #ccc; /* Líneas separadoras */
   }
 
-  .nav-right{
+  .nav-right {
     display: none;
   }
-
 }

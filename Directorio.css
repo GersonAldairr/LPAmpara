@@ -1,326 +1,325 @@
 :root {
-    --primary-purple: #4a148c; 
-    --light-purple: #f6eefc; 
-    --dark-text: #2b2140;
-    --pink-sos: #ff5b7f; 
-    --dark-background: #4a148c; 
-    --card-hover-purple: #6c46b5;
-    --search-white: #FFFFFF; 
-    --search-placeholder: #888; 
+  --primary-purple: #4a148c;
+  --light-purple: #f6eefc;
+  --dark-text: #2b2140;
+  --pink-sos: #ff5b7f;
+  --dark-background: #4a148c;
+  --card-hover-purple: #6c46b5;
+  --search-white: #ffffff;
+  --search-placeholder: #888;
 }
 
 /* 1. Contenedor Principal (Fondo Morado Oscuro) */
 .directory-page-container {
-    background-color: var(--dark-background); 
-    max-width: 100%;
-    margin: 0;
-    padding: 3rem 2rem;
-    color: white; 
-    min-height: 90vh;
+  background-color: var(--dark-background);
+  max-width: 100%;
+  margin: 0;
+  padding: 3rem 2rem;
+  color: white;
+  min-height: 90vh;
 }
 
 /* 2. Estructura de Contenido */
 .directory-header {
-    background-color: transparent; 
-    color: white;
-    padding: 0; 
-    border-radius: 0;
-    max-width: 1200px;
-    margin: 0 auto 1rem;
-    
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  border-radius: 0;
+  max-width: 1200px;
+  margin: 0 auto 1rem;
 }
 
 .directory-header h1 {
-    font-size: 3rem; 
-    font-weight: 700;
-    color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
 }
 
 .directory-header p {
-    font-size: 1.1rem;
-    margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
 }
 
 /* 3. Barra de Búsqueda Principal (Larga y BLANCA) */
 .main-search-bar {
-    display: flex;
-    background-color: var(--search-white);
-    border-radius: 10px; 
-    overflow: hidden;
-    margin-bottom: 1rem;
-    max-width: 800px;
-    margin-left: 0;
-    margin-right: auto;
+  display: flex;
+  background-color: var(--search-white);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 #main-search-input {
-    flex-grow: 1;
-    border: none;
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
-    background: transparent;
-    color: var(--dark-text); 
-    outline: none;
+  flex-grow: 1;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background: transparent;
+  color: var(--dark-text);
+  outline: none;
 }
 
 #main-search-input::placeholder {
-    color: var(--search-placeholder);
+  color: var(--search-placeholder);
 }
 
 .search-button {
-    border: none;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    flex-shrink: 0; 
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
 }
 
 .search-button:hover {
-    background-color: var(--card-hover-purple);
+  background-color: var(--card-hover-purple);
 }
 
 .search-button img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 /* 4. Filtro de Favoritos */
 .filter-controls-standalone {
-    font-size: 1rem;
-    max-width: 800px;
-    margin: 0 auto 6rem; 
-    text-align: left; 
-        padding-bottom: 1rem;  /* nuevo: da aire visual */
-
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 6rem;
+  text-align: left;
+  padding-bottom: 1rem; /* nuevo: da aire visual */
 }
 /* SEPARA el filtro de la primera tarjeta */
 .directory-main-content {
-    margin-top: 2.5rem !important;
+  margin-top: 2.5rem !important;
 }
 
 .filter-controls-standalone label {
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    color: white; 
-        gap: 20px; /* nuevo: mejor separación checkbox-texto */
-
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  gap: 20px; /* nuevo: mejor separación checkbox-texto */
 }
 
 .filter-controls-standalone input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    accent-color: var(--pink-sos);
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  accent-color: var(--pink-sos);
 }
 
 /* 5. Layout General */
 .directory-main-content {
-    display: flex;
-    gap: 3rem;
-    max-width: 1200px; 
-    margin: 0 auto;
-    align-items: flex-start;
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
 }
 
 .directory-list {
-    flex-grow: 1;
-    min-width: 0;
-    max-width: 800px;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 800px;
 }
 
 /* 6. Sidebar */
 .directory-sidebar {
-    width: 300px; 
-    padding-top: 5rem;
-    text-align: center;
-    flex-shrink: 0;
-    min-height: 400px; 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+  width: 300px;
+  padding-top: 5rem;
+  text-align: center;
+  flex-shrink: 0;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .directory-sidebar img {
-    width: 100%;
-    max-width: 250px;
-    opacity: 0.3; 
-    filter: invert(100%) hue-rotate(240deg) saturate(0.5); 
+  width: 100%;
+  max-width: 250px;
+  opacity: 0.3;
+  filter: invert(100%) hue-rotate(240deg) saturate(0.5);
 }
 
 /* 7. Tarjeta del Directorio (Corregida con altura uniforme) */
 .directory-card {
-    display: flex;
-    background-color: var(--search-white);
-    color: var(--dark-text);
-    border: none;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
-    align-items: center;
-    transition: transform 0.2s;
+  display: flex;
+  background-color: var(--search-white);
+  color: var(--dark-text);
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  transition: transform 0.2s;
 
-    /* 🔥 ARREGLA LA DESALINEACIÓN */
-    min-height: 130px; 
+  /* 🔥 ARREGLA LA DESALINEACIÓN */
+  min-height: 130px;
 }
 
 .directory-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-avatar img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--light-purple); 
-    padding: 10px;
-    margin-right: 1.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--light-purple);
+  padding: 10px;
+  margin-right: 1.5rem;
 }
 
 /* 🔥 Limita ancho de texto para evitar empujes */
 .card-details {
-    flex: 1;
-    max-width: 500px;
+  flex: 1;
+  max-width: 500px;
 }
 
 .line-name {
-    font-size: 1.5rem;
-    color: var(--primary-purple);
-    margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 0.2rem;
 }
 
 .line-description {
-    color: #555;
-    font-size: 0.95rem;
+  color: #555;
+  font-size: 0.95rem;
 }
 
 .line-number {
-    font-weight: 600;
-    font-size: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 /* 8. Botones */
 .card-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* 🔥 CENTRA EL BLOQUE COMPLETO */
-    gap: 0.5rem;
-    margin-left: 2rem;
-    flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 CENTRA EL BLOQUE COMPLETO */
+  gap: 0.5rem;
+  margin-left: 2rem;
+  flex-shrink: 0;
 }
 
-.favorite-btn, .call-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.6rem 1rem;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    text-decoration: none;
-    border: 1px solid var(--primary-purple);
-    width: 150px;
+.favorite-btn,
+.call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-decoration: none;
+  border: 1px solid var(--primary-purple);
+  width: 150px;
 }
 
 .favorite-btn {
-    background-color: var(--light-purple);
-    color: var(--primary-purple);
+  background-color: var(--light-purple);
+  color: var(--primary-purple);
 }
 
 .favorite-btn img {
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
 }
 
 .call-btn {
-    background-color: var(--primary-purple);
-    color: white;
+  background-color: var(--primary-purple);
+  color: white;
 }
 
 .call-btn:hover {
-    background-color: var(--card-hover-purple);
+  background-color: var(--card-hover-purple);
 }
 
 .chat-btn {
-    background-color: var(--pink-sos);
-    border-color: var(--pink-sos);
+  background-color: var(--pink-sos);
+  border-color: var(--pink-sos);
 }
 
 /* Media Queries */
 @media (max-width: 992px) {
-    .directory-main-content {
-        flex-direction: column;
-    }
+  .directory-main-content {
+    flex-direction: column;
+  }
 
-    .directory-sidebar {
-        display: none; 
-    }
-    
-    .directory-header {
-        padding: 0 1rem;
-    }
-    
-    .main-search-bar,
-    .filter-controls-standalone {
-        max-width: 100%;
-    }
+  .directory-sidebar {
+    display: none;
+  }
+
+  .directory-header {
+    padding: 0 1rem;
+  }
+
+  .main-search-bar,
+  .filter-controls-standalone {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-    .directory-card {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        min-height: auto; /* En móvil no es necesario igualar alturas */
-    }
-    
-    .card-avatar {
-        margin-bottom: 1rem;
-    }
+  .directory-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-height: auto; /* En móvil no es necesario igualar alturas */
+  }
 
-    .card-actions {
-        flex-direction: row;
-        margin-left: 0;
-        margin-top: 1rem;
-        width: 100%;
-        justify-content: space-between;
-    }
+  .card-avatar {
+    margin-bottom: 1rem;
+  }
 
-    .favorite-btn, .call-btn {
-        width: 48%;
-    }
+  .card-actions {
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .favorite-btn,
+  .call-btn {
+    width: 48%;
+  }
 }
 /* Contenedor que coloca icono + título en fila */
 .titulo-fila {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Tamaño del icono (similar al otro diseño) */
 .btn-retro img,
 .btn-retroceso img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 
 /* Ajuste del título para igualarse al otro estilo */
 .titulo-fila h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 /* Subtítulo alineado igual que el diseño */
 .subtitulo {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 }

@@ -139,52 +139,51 @@
   font-size: 0.95rem;
 }
 
-.account-layout a{
+.account-layout a {
   text-decoration: none;
   color: #482983;
 }
 
-.container-delete{
-    display: flex;
-    flex-direction: column;
+.container-delete {
+  display: flex;
+  flex-direction: column;
 }
 
-.container-delete h3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container-delete h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.btns{
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 10rem;
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
 }
 
-.btn-cancell-delete{
-    padding: 1rem;
-    background: transparent;
-    border-radius: 1rem;
-    border: 0.05rem solid #482983;
+.btn-cancell-delete {
+  padding: 1rem;
+  background: transparent;
+  border-radius: 1rem;
+  border: 0.05rem solid #482983;
 }
 
-.btn-delete{
-    padding: 1rem;
-    background: transparent;
-    border-radius: 1rem;
-    border: 0.05rem solid #482983;
+.btn-delete {
+  padding: 1rem;
+  background: transparent;
+  border-radius: 1rem;
+  border: 0.05rem solid #482983;
 }
 
-.btn-cancell-delete:hover{
-    background-color: #ff4c6a;
-    border: transparent;
-    color: white;
+.btn-cancell-delete:hover {
+  background-color: #ff4c6a;
+  border: transparent;
+  color: white;
 }
-.btn-delete:hover{
-    background-color: #ff4c6a;
-    border: transparent;
-    color: white;
+.btn-delete:hover {
+  background-color: #ff4c6a;
+  border: transparent;
+  color: white;
 }
 
 /* al hacer hover en el contenedor, forzamos que el enlace dentro sea blanco */
@@ -202,18 +201,16 @@
   padding: 1rem 1.5rem;
   border-radius: 1rem;
   font-size: 1rem;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   opacity: 0;
   pointer-events: none;
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
   z-index: 9999;
 }
 
 .delete-message.show {
   opacity: 1;
 }
-
-
 
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
@@ -225,27 +222,74 @@
     padding: 1.5rem 1.25rem;
   }
 
-    .btns{
-        display: flex;
-        justify-content: space-between;
-        padding: 2rem 6rem;
-    }
-
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+  }
 }
-
-/* Versión tipo “Yanbal mobile”: sidebar como lista grande */
 @media (max-width: 600px) {
+  /* El layout ya es 1 columna pero ajustamos mejor */
   .account-sidebar {
-    order: -1; /* Sidebar arriba en mobile */
+    order: -1;
+    padding: 1.2rem;
+  }
+
+  .account-main {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .account-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Items de menú ocupan todo el ancho tipo app */
+  .account-menu-item {
+    padding: 1rem;
+    border-bottom: 1px solid #f1e6ff;
+    border-radius: 0;
   }
 
   .sidebar-hello {
     text-align: center;
   }
 
-  .account-menu-item {
-    border-radius: 0;
-    border-bottom: 1px solid #f1e6ff;
+  .hello-name {
+    font-size: 1.3rem;
   }
 }
 
+@media (max-width: 480px) {
+  /* Contenedor general de eliminar cuenta */
+  .container-delete h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Botones ya no deben tener ese padding gigante */
+  .btns {
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-cancell-delete,
+  .btn-delete {
+    padding: 0.8rem 1rem;
+    width: 45%;
+    text-align: center;
+  }
+}
+@media (max-width: 380px) {
+  .btns {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1rem;
+  }
+
+  .btn-cancell-delete,
+  .btn-delete {
+    width: 100%;
+  }
+}

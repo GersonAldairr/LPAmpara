@@ -20,22 +20,8 @@
 
   <body>
     <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
       <div class="nav-left">
-        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
-      </div>
-
-      <nav class="nav-links">
-        <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
-        <a href="#" class="btn-sos">SOS</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="#">Articulos</a>
-        <a href="nosotros.html">Nosotros</a>
-      </nav>
-
-      <div class="nav-right">
-        <!-- opcional: botón cuenta -->
-        <a href="#" class="btn-cuenta">Mi cuenta</a>
-
         <button
           class="btn-burger"
           aria-label="Abrir menú"
@@ -45,28 +31,52 @@
           <span></span>
           <span></span>
         </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
       </div>
     </header>
 
     <!-- MENÚ MÓVIL -->
     <aside class="mobile-menu" aria-hidden="true">
       <div class="mobile-menu-panel">
+        <!-- CABECERA DEL MENÚ -->
         <div class="mobile-menu-header">
           <div class="user-avatar">F</div>
 
           <div class="user-info">
             <p class="user-name">Fab Q</p>
-            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+            <a href="mi_perfil.html" class="user-link">Ver mi perfil</a>
           </div>
 
           <button class="btn-close" aria-label="Cerrar menú">✕</button>
         </div>
 
+        <!-- LINKS DEL MENÚ -->
         <nav class="mobile-menu-links">
-          <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
-
           <a href="servicios.html">Servicios</a>
-          <a href="#">Articulos</a>
+          <a href="articulo_usuario.html">Artículos</a>
           <a href="nosotros.html">Nosotros</a>
         </nav>
       </div>
@@ -90,7 +100,7 @@
 
             <button class="account-menu-item">
               <span class="icon">📜</span>
-              <a href="">Historial</a>
+              <a>Historial</a>
             </button>
 
             <button class="account-menu-item">
@@ -100,17 +110,17 @@
 
             <button class="account-menu-item">
               <span class="icon">🔔</span>
-              <a href="">Notificaciones</a>
+              <span>Notificaciones</span>
             </button>
 
             <button class="account-menu-item">
               <span class="icon">🛠</span>
-              <a href="reportar.html">Reportar un problema</a>
+              <span>Reportar un problema</span>
             </button>
 
             <button class="account-menu-item">
               <span class="icon">🔄</span>
-              <a href="">Cerrar sesión</a>
+              <span>Cerrar sesión</span>
             </button>
 
             <button class="account-menu-item danger">
@@ -184,7 +194,7 @@
           <div class="footer-brand">
             <img
               src="icons/logo_ampara_footer.png"
-              alt="Logo Ampara"
+              alt="Logo"
               class="footer-logo"
             />
             <small>© 2025 Todos los derechos reservados</small>
@@ -193,18 +203,18 @@
           <!-- Enlaces legales -->
           <div class="footer-links">
             <h4>Legal</h4>
-            <a href="/Documentos/politicaprivacidad.pdf">
-              Política de Privacidad
-            </a>
-            <a href="/Documentos/terminosycondiciones.pdf">
-              Términos y Condiciones
-            </a>
-            <a href="/Documentos/LeyProteccionDatos.pdf">
-              Protección de Datos
-            </a>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
           </div>
 
-          <!-- Redes sociales -->
+          <!-- Redes sociales con íconos personalizados -->
           <div class="footer-social">
             <h4>Síguenos</h4>
             <a href="#"
