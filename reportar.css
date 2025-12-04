@@ -218,6 +218,22 @@
     opacity: 1;
 }
 
+.btn-back {
+  background: transparent;
+  border: 2px solid #482983;
+  color: #482983;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-back:hover {
+  background: #482983;
+  color: white;
+}
+
 /* adaptaciones móviles */
 @media (max-width: 520px){
   .box-input { min-height: 180px; }
