@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>AMPARA - Articulo</title>
+    <title>AMPARA - Articulo psicologo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Fuentes -->
@@ -12,18 +12,20 @@
     />
 
     <!-- Estilos globales de tu proyecto -->
-    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="psicologo.css" />
     <link rel="stylesheet" href="Pie.css" />
     <link rel="stylesheet" href="menu_hamburguesa.css" />
 
     <!-- Estilos propios de esta página -->
-    <link rel="stylesheet" href="articulo_usuario.css" />
+    <link rel="stylesheet" href="articulo_psicologo.css" />
   </head>
 
   <body>
+    <!-- NAVBAR -->
     <header class="navbar">
-      <!-- IZQUIERDA: solo burger -->
+      <!-- IZQUIERDA: hamburguesa + logo -->
       <div class="nav-left">
+        <!-- Botón hamburguesa (solo se ve en móvil) -->
         <button
           class="btn-burger"
           aria-label="Abrir menú"
@@ -34,59 +36,53 @@
           <span></span>
         </button>
 
-        <!-- LOGO SOLO PARA DESKTOP -->
-        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
-          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        <!-- Logo clickeable que lleva al home del especialista -->
+        <a href="psicologo.html" class="nav-logo-link">
+          <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
         </a>
       </div>
 
-      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
-      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
-        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
-      </a>
-
-      <!-- CENTRO (solo desktop) -->
+      <!-- CENTRO: links de navegación (solo desktop) -->
       <nav class="nav-links">
-        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="articulo_usuario.html">Artículos</a>
-        <a href="nosotros.html">Nosotros</a>
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
       </nav>
 
-      <!-- DERECHA -->
+      <!-- DERECHA: Mi cuenta -->
       <div class="nav-right">
-        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
-        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+        <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
       </div>
     </header>
-
     <!-- MENÚ MÓVIL -->
-    <aside class="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-panel">
-        <!-- CABECERA DEL MENÚ -->
-        <div class="mobile-menu-header">
-          <div class="user-avatar">F</div>
-
-          <div class="user-info">
-            <p class="user-name">Fab Q</p>
-            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
-          </div>
-
-          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+    <aside class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+        <div class="user-info">
+          <span class="user-name">Fab Q</span>
+          <a href="mi_cuenta2.html" class="user-link">Ver mi perfil</a>
         </div>
 
-        <!-- LINKS DEL MENÚ -->
-        <nav class="mobile-menu-links">
-          <a href="servicios.html">Servicios</a>
-          <a href="articulos.html">Artículos</a>
-          <a href="nosotros.html">Nosotros</a>
-        </nav>
+        <button class="btn-close" id="closeMenu">✕</button>
       </div>
+
+      <nav class="mobile-menu-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
     </aside>
 
     <!-- ===== CONTENIDO PRINCIPAL NOTICIAS ===== -->
     <main class="noticias-container">
-      <h1>Artículos</h1>
+      <div class="forum-header-top">
+        <!-- Botón de volver -->
+        <a href="psicologo.html" class="back-btn">
+          <img src="icons/atras.png" alt="Volver" />
+        </a>
+        <h1>Artículos</h1>
+      </div>
+
       <p class="subtitulo">
         Todas nuestros artículos y publicaciones en un solo lugar.
       </p>
@@ -98,6 +94,24 @@
           <img src="icons/lupa.png" alt="" />
         </button>
       </div>
+
+      <!-- BLOQUE PARA PUBLICAR NOTICIA -->
+      <section class="post-creator">
+        <img src="image/anonimo1.png" alt="Avatar usuaria" class="avatar" />
+
+        <div class="post-fields">
+          <input
+            type="text"
+            placeholder="Escribe un título para tu artículo aquí"
+          />
+
+          <textarea
+            placeholder="Escribe aquí el contenido de tu articulo..."
+          ></textarea>
+
+          <button class="publicar">Publicar</button>
+        </div>
+      </section>
 
       <!-- LISTADO DE NOTICIAS -->
       <section class="lista-noticias">
@@ -132,7 +146,6 @@
         </a>
       </section>
     </main>
-
     <!-- PIE DE PÁGINA -->
     <section id="footer">
       <footer class="footer">

@@ -183,7 +183,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  padding: 1.4rem 0;
+  padding: 1.4rem 2rem;
 }
 
 .mobile-menu-links a {

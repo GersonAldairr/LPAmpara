@@ -1,3 +1,25 @@
+/* Título + botón de volver */
+.forum-header-top {
+  display: flex;
+  align-items: center; /* centra flecha y texto en vertical */
+  gap: 0.8rem; /* espacio entre flecha y "Artículos" */
+  margin-bottom: 1.5rem; /* separa del resto del contenido */
+}
+
+/* Botón de volver */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tamaño y ajuste de la flecha */
+.back-btn img {
+  width: 36px; /* prueba 32–40px según te guste */
+  height: 36px;
+  object-fit: contain;
+}
+
 /* ====== RESET ====== */
 * {
   margin: 0;
@@ -166,10 +188,6 @@ h1 {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.2rem;
-  max-height: 110px;     /* Lo que se ve antes de expandir */
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-  position: relative;
 }
 
 .noticia .avatar {
@@ -186,19 +204,4 @@ h1 {
   color: #7667a3;
   display: block;
   margin-bottom: 0.6rem;
-}
-
-/* Expandir al pasar el cursor (solo en desktop) */
-@media (hover: hover) and (pointer: fine) {
-  .noticia:hover {
-    max-height: 900px;   /* altura suficiente para ver todo */
-  }
-}
-
-/* En celulares, mostrar SIEMPRE toda la tarjeta */
-@media (max-width: 600px) {
-  .noticia {
-    max-height: none !important;  /* desbloquea altura */
-    overflow: visible !important; /* evita cortes */
-  }
 }
