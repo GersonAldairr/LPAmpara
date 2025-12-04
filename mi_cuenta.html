@@ -10,8 +10,7 @@
       rel="stylesheet"
     />
 
-    <!-- Reutilizamos estilos del header + estilos propios -->
-
+    <!-- Estilos globales + propios -->
     <link rel="stylesheet" href="ampara.css" />
     <link rel="stylesheet" href="Pie.css" />
     <link rel="stylesheet" href="menu_hamburguesa.css" />
@@ -61,7 +60,6 @@
     <!-- MENÚ MÓVIL -->
     <aside class="mobile-menu" aria-hidden="true">
       <div class="mobile-menu-panel">
-        <!-- CABECERA DEL MENÚ -->
         <div class="mobile-menu-header">
           <div class="user-avatar">F</div>
 
@@ -73,10 +71,9 @@
           <button class="btn-close" aria-label="Cerrar menú">✕</button>
         </div>
 
-        <!-- LINKS DEL MENÚ -->
         <nav class="mobile-menu-links">
           <a href="servicios.html">Servicios</a>
-          <a href="articulo_usuario.html">Artículos</a>
+          <a href="#">Articulos</a>
           <a href="nosotros.html">Nosotros</a>
         </nav>
       </div>
@@ -95,17 +92,17 @@
           <nav class="account-menu">
             <button class="account-menu-item is-active">
               <span class="icon">👤</span>
-              <a href="mi_cuenta.html">Perfil</a>
+              <span>Perfil</span>
             </button>
 
             <button class="account-menu-item">
               <span class="icon">📜</span>
-              <a>Historial</a>
+              <span>Historial</span>
             </button>
 
             <button class="account-menu-item">
               <span class="icon">💜</span>
-              <a href="favoritos.html">Favoritos</a>
+              <span>Favoritos</span>
             </button>
 
             <button class="account-menu-item">
@@ -125,7 +122,7 @@
 
             <button class="account-menu-item danger">
               <span class="icon">✖</span>
-              <a href="eliminarCuenta.html">Eliminar cuenta</a>
+              <span>Eliminar cuenta</span>
             </button>
           </nav>
         </aside>
@@ -135,57 +132,112 @@
           <h1 class="account-title">Mi perfil</h1>
 
           <!-- Bloque datos personales -->
-          <article class="account-card">
+          <article class="account-card" id="card-datos">
             <header class="account-card-header">
               <h2>Datos personales</h2>
-              <button class="btn-outline">Editar</button>
+              <!-- botón conectado al JS con data-target -->
+              <button class="btn-outline edit-btn" data-target="card-datos">
+                Editar
+              </button>
             </header>
 
             <div class="account-card-body">
               <div class="field-group">
                 <p class="field-label">Nombre</p>
-                <p class="field-value">Fabiana</p>
+
+                <!-- Texto mostrado -->
+                <p class="field-value" data-field="nombre">Fabiana</p>
+
+                <!-- Input para modo edición -->
+                <input
+                  class="field-input"
+                  data-input="nombre"
+                  type="text"
+                  value="Fabiana"
+                />
               </div>
 
               <div class="field-group">
                 <p class="field-label">Apellido</p>
-                <p class="field-value">Q.</p>
+
+                <p class="field-value" data-field="apellido">Q.</p>
+
+                <input
+                  class="field-input"
+                  data-input="apellido"
+                  type="text"
+                  value="Q."
+                />
               </div>
             </div>
           </article>
 
           <!-- Bloque correo -->
-          <article class="account-card">
+          <article class="account-card" id="card-correo">
             <header class="account-card-header">
               <h2>Correo electrónico</h2>
-              <button class="btn-outline">Editar</button>
+              <button class="btn-outline edit-btn" data-target="card-correo">
+                Editar
+              </button>
             </header>
 
             <div class="account-card-body">
               <div class="field-group">
                 <p class="field-label">Correo</p>
-                <p class="field-value">fabianaqr09@gmail.com</p>
+
+                <p class="field-value" data-field="correo">
+                  fabianaqr09@gmail.com
+                </p>
+
+                <input
+                  class="field-input"
+                  data-input="correo"
+                  type="email"
+                  value="fabianaqr09@gmail.com"
+                />
               </div>
             </div>
           </article>
 
           <!-- Bloque contraseña -->
-          <article class="account-card">
+          <article class="account-card" id="card-pass">
             <header class="account-card-header">
               <h2>Contraseña</h2>
-              <button class="btn-outline">Editar</button>
+              <button class="btn-outline edit-btn" data-target="card-pass">
+                Editar
+              </button>
             </header>
 
             <div class="account-card-body">
               <div class="field-group">
                 <p class="field-label">Contraseña</p>
-                <p class="field-value">********</p>
+
+                <p class="field-value" data-field="password">********</p>
+
+                <input
+                  class="field-input"
+                  data-input="password"
+                  type="password"
+                  value=""
+                  placeholder="Ingresa tu nueva contraseña"
+                />
               </div>
             </div>
+          </article>
+
+          <!-- Bloque contacto de emergencia -->
+          <article class="account-card">
+            <header class="account-card-header">
+              <h2>Contacto de emergencia</h2>
+              <a href="contacto_emergencia.html" class="btn-outline">
+                Visualizar
+              </a>
+            </header>
           </article>
         </section>
       </section>
     </main>
+
     <!-- PIE DE PÁGINA -->
     <section id="footer">
       <footer class="footer">
@@ -236,6 +288,7 @@
         </div>
       </footer>
     </section>
+
     <script src="menu_hamburguesa.js"></script>
     <script src="mi_cuenta.js"></script>
   </body>
