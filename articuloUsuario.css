@@ -1,0 +1,31 @@
+.noticia {
+  position: relative;
+  max-height: 120px;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+
+.noticia::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, white);
+  transition: opacity .3s ease;
+}
+
+.noticia:hover {
+  max-height: 500px;
+}
+
+.noticia:hover::after {
+  opacity: 0;
+}
+
+@media (max-width:768px) {
+    .noticia p{
+        font-size: 0.8rem;
+    }
+}
