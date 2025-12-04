@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. OBTENER ELEMENTOS
+    // 1. OBTENER ELEMENTOS DEL DOM
     const chatForm = document.getElementById('chatForm');
     const messageInput = document.getElementById('messageInput');
     const chatMessagesArea = document.getElementById('chatMessagesArea');
     const micButton = document.getElementById('micButton');
+    
+    // Elementos del menú
     const optionsBtn = document.getElementById('optionsBtn');
     const dropdownMenu = document.getElementById('dropdownMenu');
     const btnEndChat = document.getElementById('btnEndChat');
+    const btnTranscript = document.getElementById('btnTranscript'); // Botón de transcripción
 
-    // 2. VARIABLES
+    // 2. VARIABLES DE AUDIO
     let mediaRecorder;
     let audioChunks = [];
     let isRecording = false;
@@ -88,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bubbleDiv.appendChild(customPlayer);
         } else {
             const pText = document.createElement('p');
-            pText.textContent = content;
+            pText.innerHTML = content; // Usamos innerHTML para permitir negritas
             bubbleDiv.appendChild(pText);
         }
 
@@ -103,14 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollToBottom();
     }
 
-    // --- CEREBRO DEL PSICÓLOGO (RESPUESTAS "SEGURAS" / PERSONALIZADAS) ---
+    // --- CEREBRO DE LA PSICÓLOGA (RESPUESTAS) ---
     function triggerAutoResponse(esRespuestaDeAudio = false) {
-        const tiempoDeEspera = esRespuestaDeAudio ? 3000 : 2000; // Tarda un poco más, es más reflexivo
+        const tiempoDeEspera = esRespuestaDeAudio ? 3000 : 2000;
 
         setTimeout(() => {
             let respuestas;
             if (esRespuestaDeAudio) {
-                // Respuestas a AUDIO (Tono terapéutico)
                 respuestas = [
                     "Gracias Fab Q. Escucho mucha preocupación en tu voz, vamos a trabajar en ello paso a paso.",
                     "He recibido tu audio. Es totalmente válido que te sientas así dada la situación.",
@@ -118,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     "Gracias por compartirlo. ¿Hay algo específico que detonó esa emoción hoy?"
                 ];
             } else {
-                // Respuestas a TEXTO (Tono terapéutico)
                 respuestas = [
                     "Entiendo, Fab Q. ¿Te gustaría que exploremos más a fondo por qué sucede eso?",
                     "Recuerda que este es un proceso y cada paso cuenta. ¿Cómo reaccionaste en ese momento?",
@@ -132,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, tiempoDeEspera);
     }
 
-    // --- EVENTOS (IGUAL QUE ANTES) ---
+    // --- EVENTOS DE ENVÍO (TEXTO) ---
     if (chatForm) {
         chatForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -146,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- EVENTOS DE GRABACIÓN (AUDIO) ---
     if (micButton) {
         micButton.addEventListener('click', async () => {
             if (!isRecording) {
@@ -177,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- MENÚ ---
+    // --- LÓGICA DEL MENÚ ---
     if (optionsBtn && dropdownMenu) {
         optionsBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -188,12 +190,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- LÓGICA DE SALIDA ---
     if (btnEndChat) {
         btnEndChat.addEventListener('click', () => {
-            // Confirmación diferente
-            const confirmacion = confirm("¿Deseas finalizar la sesión segura? Tus avances quedarán guardados.");
+            const confirmacion = confirm("¿Deseas finalizar la sesión segura?");
             if (confirmacion) {
-                window.location.href = 'hablarahora.html'; // Vuelve al menú de selección
+                window.location.href = 'hablarahora.html';
+            }
+        });
+    }
+
+    // --- LÓGICA DE TRANSCRIPCIÓN (NUEVO) ---
+    if (btnTranscript) {
+        btnTranscript.addEventListener('click', () => {
+            // 1. Alerta de seguridad importante
+            const confirmSafety = confirm(
+                "Estás a punto de descargar una copia de este chat.\n" +
+                "Si este dispositivo es compartido, alguien más podría leerlo.\n\n" +
+                "¿Deseas continuar y guardar el archivo?"
+            );
+
+            if (confirmSafety) {
+                // 2. Construir el texto
+                let transcriptionText = "HISTORIAL DE SESIÓN - AMPARA (CONFIDENCIAL)\n";
+                transcriptionText += "Fecha: " + new Date().toLocaleString() + "\n";
+                transcriptionText += "Paciente: Fab Q\n";
+                transcriptionText += "Especialista: Lic. María\n";
+                transcriptionText += "========================================\n\n";
+
+                const messages = document.querySelectorAll('.message');
+                messages.forEach(msg => {
+                    const isSent = msg.classList.contains('sent');
+                    const author = isSent ? "FAB Q (PACIENTE)" : "LIC. MARÍA (PSICÓLOGA)";
+                    const time = msg.querySelector('.message-time').innerText;
+                    
+                    let content = "";
+                    const textP = msg.querySelector('p');
+                    const audioEl = msg.querySelector('audio');
+
+                    if (textP) {
+                        content = textP.innerText;
+                    } else if (audioEl) {
+                        content = "[Nota de voz enviada - Audio no disponible en texto]";
+                    }
+
+                    transcriptionText += `[${time}] ${author}: ${content}\n`;
+                });
+
+                transcriptionText += "\n========================================\n";
+                transcriptionText += "Fin del registro.";
+
+                // 3. Crear y descargar el archivo blob
+                const blob = new Blob([transcriptionText], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'registro_chat_ampara_seguro.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                
+                // Limpieza
+                URL.revokeObjectURL(url);
             }
         });
     }
