@@ -20,22 +20,8 @@
 
   <body>
     <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
       <div class="nav-left">
-        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
-      </div>
-
-      <nav class="nav-links">
-        <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
-        <a href="sos.html" class="btn-sos">SOS</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="#">Articulos</a>
-        <a href="nosotros.html">Nosotros</a>
-      </nav>
-
-      <div class="nav-right">
-        <!-- opcional: botón cuenta -->
-        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
-
         <button
           class="btn-burger"
           aria-label="Abrir menú"
@@ -45,6 +31,30 @@
           <span></span>
           <span></span>
         </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
       </div>
     </header>
 
